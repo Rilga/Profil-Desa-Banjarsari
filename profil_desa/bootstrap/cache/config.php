@@ -17,7 +17,7 @@
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
     'cipher' => 'AES-256-CBC',
-    'key' => 'base64:uL9B9T3Kgc40D7Q/vxzLTPPky1rHAZGZ4TY0poiEA7s=',
+    'key' => 'base64:0BwL7WZ9rVnHiYF58Aw9Pt2N8vCmgfc3a7z4EoqFwt4=',
     'previous_keys' => 
     array (
     ),
@@ -158,8 +158,8 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => 'D:\\code\\laragon\\www\\profil_desa\\storage\\framework/cache/data',
-        'lock_path' => 'D:\\code\\laragon\\www\\profil_desa\\storage\\framework/cache/data',
+        'path' => 'D:\\code\\laragon\\www\\BANJARSARI\\profil_desa\\storage\\framework/cache/data',
+        'lock_path' => 'D:\\code\\laragon\\www\\BANJARSARI\\profil_desa\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -332,7 +332,7 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\code\\laragon\\www\\profil_desa\\storage\\app/private',
+        'root' => 'D:\\code\\laragon\\www\\BANJARSARI\\profil_desa\\storage\\app/private',
         'serve' => true,
         'throw' => false,
         'report' => false,
@@ -340,7 +340,7 @@
       'public' => 
       array (
         'driver' => 'local',
-        'root' => 'D:\\code\\laragon\\www\\profil_desa\\storage\\app/public',
+        'root' => 'D:\\code\\laragon\\www\\BANJARSARI\\profil_desa\\storage\\app/public',
         'url' => 'http://localhost:8000/storage',
         'visibility' => 'public',
         'throw' => false,
@@ -362,7 +362,7 @@
     ),
     'links' => 
     array (
-      'D:\\code\\laragon\\www\\profil_desa\\public\\storage' => 'D:\\code\\laragon\\www\\profil_desa\\storage\\app/public',
+      'D:\\code\\laragon\\www\\BANJARSARI\\profil_desa\\public\\storage' => 'D:\\code\\laragon\\www\\BANJARSARI\\profil_desa\\storage\\app/public',
     ),
   ),
   'logging' => 
@@ -387,14 +387,14 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => 'D:\\code\\laragon\\www\\profil_desa\\storage\\logs/laravel.log',
+        'path' => 'D:\\code\\laragon\\www\\BANJARSARI\\profil_desa\\storage\\logs/laravel.log',
         'level' => 'debug',
         'replace_placeholders' => true,
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => 'D:\\code\\laragon\\www\\profil_desa\\storage\\logs/laravel.log',
+        'path' => 'D:\\code\\laragon\\www\\BANJARSARI\\profil_desa\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
         'replace_placeholders' => true,
@@ -459,7 +459,7 @@
       ),
       'emergency' => 
       array (
-        'path' => 'D:\\code\\laragon\\www\\profil_desa\\storage\\logs/laravel.log',
+        'path' => 'D:\\code\\laragon\\www\\BANJARSARI\\profil_desa\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -537,7 +537,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => 'D:\\code\\laragon\\www\\profil_desa\\resources\\views/vendor/mail',
+        0 => 'D:\\code\\laragon\\www\\BANJARSARI\\profil_desa\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -632,7 +632,7 @@
     'lifetime' => 120,
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => 'D:\\code\\laragon\\www\\profil_desa\\storage\\framework/sessions',
+    'files' => 'D:\\code\\laragon\\www\\BANJARSARI\\profil_desa\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -759,9 +759,9 @@
   array (
     'paths' => 
     array (
-      0 => 'D:\\code\\laragon\\www\\profil_desa\\resources\\views',
+      0 => 'D:\\code\\laragon\\www\\BANJARSARI\\profil_desa\\resources\\views',
     ),
-    'compiled' => 'D:\\code\\laragon\\www\\profil_desa\\storage\\framework\\views',
+    'compiled' => 'D:\\code\\laragon\\www\\BANJARSARI\\profil_desa\\storage\\framework\\views',
   ),
   'tinker' => 
   array (
