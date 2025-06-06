@@ -16,10 +16,10 @@ class UserMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::user()->role == 'user') {
-            return $next($request);
+        if (!Auth::check() || Auth::user()->role !== 'user') {
+            abort(403, 'Unauthorized');
         }
 
-        return redirect()->back()->with('error', 'You do not have access to this page.');
+        return $next($request);
     }
 }

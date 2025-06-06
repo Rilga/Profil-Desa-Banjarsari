@@ -13,7 +13,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::YRtL17fDJTauJOyQ',
+            '_route' => 'generated::Q9TSFBT4XnMGvA6j',
           ),
           1 => NULL,
           2 => 
@@ -33,7 +33,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::8fNAoojlO8rTIRHl',
+            '_route' => 'generated::3eBPbgrAjEgmenQJ',
           ),
           1 => NULL,
           2 => 
@@ -122,7 +122,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Rbr5t35KpuGFTYyf',
+            '_route' => 'generated::xkDUUoZeWFqpZZJV',
           ),
           1 => NULL,
           2 => 
@@ -158,7 +158,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::8eZeDKNNY4Ipeyb6',
+            '_route' => 'generated::eWZ3Mul9y4dfFGET',
           ),
           1 => NULL,
           2 => 
@@ -288,7 +288,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::2ORavWI2pUbmewRR',
+            '_route' => 'generated::HDTdML6mb6A4ELxX',
           ),
           1 => NULL,
           2 => 
@@ -471,7 +471,7 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
-    'generated::YRtL17fDJTauJOyQ' => 
+    'generated::Q9TSFBT4XnMGvA6j' => 
     array (
       'methods' => 
       array (
@@ -500,7 +500,7 @@ app('router')->setCompiledRoutes(
                         \'exception\' => $exception,
                     ]), status: $exception ? 500 : 200);
                 }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000004c20000000000000000";}}',
-        'as' => 'generated::YRtL17fDJTauJOyQ',
+        'as' => 'generated::Q9TSFBT4XnMGvA6j',
       ),
       'fallback' => false,
       'defaults' => 
@@ -516,7 +516,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::8fNAoojlO8rTIRHl' => 
+    'generated::3eBPbgrAjEgmenQJ' => 
     array (
       'methods' => 
       array (
@@ -538,7 +538,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::8fNAoojlO8rTIRHl',
+        'as' => 'generated::3eBPbgrAjEgmenQJ',
       ),
       'fallback' => false,
       'defaults' => 
@@ -704,7 +704,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::Rbr5t35KpuGFTYyf' => 
+    'generated::xkDUUoZeWFqpZZJV' => 
     array (
       'methods' => 
       array (
@@ -725,7 +725,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::Rbr5t35KpuGFTYyf',
+        'as' => 'generated::xkDUUoZeWFqpZZJV',
       ),
       'fallback' => false,
       'defaults' => 
@@ -779,7 +779,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::8eZeDKNNY4Ipeyb6' => 
+    'generated::eWZ3Mul9y4dfFGET' => 
     array (
       'methods' => 
       array (
@@ -800,7 +800,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::8eZeDKNNY4Ipeyb6',
+        'as' => 'generated::eWZ3Mul9y4dfFGET',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1120,7 +1120,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::2ORavWI2pUbmewRR' => 
+    'generated::HDTdML6mb6A4ELxX' => 
     array (
       'methods' => 
       array (
@@ -1141,7 +1141,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::2ORavWI2pUbmewRR',
+        'as' => 'generated::HDTdML6mb6A4ELxX',
       ),
       'fallback' => false,
       'defaults' => 

@@ -5,17 +5,17 @@
   <div class="navbar-container">
     <!-- Logo -->
     <a href="#" class="logo">
-      <img :src="scrolled ? '{{ asset('images/logo-giveat-hitam.png') }}' : '{{ asset('images/logowhite.png') }}'" 
-           alt="GivEats" 
-           class="h-8 transition-all duration-300">
+                <img :src="scrolled ? '{{ asset('images/logo.png') }}' : '{{ asset('images/logo.png') }}'" 
+          alt="GivEats" 
+          class="h-8 transition-all duration-300"
+          style="width: 40px; height: auto; transition: all 0.3s ease;">
     </a>
 
     <!-- Menu Tengah -->
     <div class="nav-links">
       <a href="#" class="nav-link">Beranda</a>
+      <a href="#sejarah" class="nav-link">Sejarah</a>
       <a href="#misi" class="nav-link">Misi</a>
-      <a href="#tentang" class="nav-link">Tentang Kami</a>
-      <a href="#testimoni" class="nav-link">Testimoni</a>
     </div>
 
     <!-- Tombol Login/Register -->
@@ -45,11 +45,11 @@
 
 .navbar-scrolled .nav-link,
 .navbar-scrolled .login-btn {
-  color: #006837 !important;
+  color: #010101 !important;
 }
 
 .navbar-scrolled .login-btn {
-  border-color: #006837 !important;
+  border-color: #00923F !important;
 }
 
 .navbar-scrolled .login-btn:hover {
@@ -57,7 +57,7 @@
 }
 
 .navbar-scrolled .register-btn {
-  background-color: #006837 !important;
+  background-color: #00923F !important;
   color: white !important;
 }
 
@@ -92,7 +92,7 @@
   border: 1px solid white;
 }
 .register-btn {
-  background-color: #006837;
+  background-color: #00923F;
   color: white;
   text-decoration: none;
   padding: 8px 20px;
@@ -139,7 +139,7 @@
 
 .nav-link:hover,
 .nav-link.active {
-  color: #006837;
+  color: #00923F;
 }
 
 .nav-link::after {
@@ -149,7 +149,7 @@
   height: 2px;
   bottom: -2px;
   left: 0;
-  background-color: #006837;
+  background-color: #00923F;
   transition: width 0.3s ease;
 }
 
@@ -159,7 +159,7 @@
 }
 
 .btn-daftar {
-  background-color: #006837;
+  background-color: #00923F;
   color: white;
   padding: 6px 18px;
   border-radius: 20px;
