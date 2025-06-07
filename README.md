@@ -2,10 +2,22 @@
 Website Profile Desa Banjarsari Surakarta
 
 Fitur Website : 
-Profil Desa 🡪 (Visi Misi, Struktur Organisasi, Sejarah, Peta, Galeri)
+1. Profil Desa
+   - Sejarah
+   - Visi Misi
+   - Struktur Organisasi
+   - Peta
+   - Galeri
+2. Etalase Komunitas
+   - menampilkan kegiatan komunitas/budaya loka
+   - Masyarakat bisa isi kontennya
+4. Administrasi Persuratan
+5. Kontak kami
 
-Etalase Komunitas 🡪 (menampilkan kegiatan komunitas/budaya lokal, Masyarakat bisa isi kontennya)
-
-Administrasi Persuratan
-
-Kontak kami
+-------------------------------------------------------------------------------------------------
+Inisialisasi Project / Cara Menjalankan Project
+- Copy file .env.example dan rename menjadi .env
+- composer install
+- npm install
+- npm run dev
+- php artisan serve
