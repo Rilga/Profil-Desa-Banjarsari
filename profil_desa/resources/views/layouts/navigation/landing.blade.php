@@ -1,8 +1,9 @@
-<nav x-data="{ scrolled: false }" 
-     @scroll.window="scrolled = window.scrollY > 10" 
-     :class="{ 'navbar-scrolled': scrolled }" 
+<nav x-data="{ scrolled: false }"
+     @scroll.window="scrolled = window.scrollY > 10"
+     :class="{ 'navbar-scrolled': scrolled }"
      class="navbar">
   <div class="navbar-container">
+    
     <!-- Logo -->
     <a href="#" class="logo">
                 <img :src="scrolled ? '{{ asset('images/logo.png') }}' : '{{ asset('images/logo.png') }}'" 
@@ -12,11 +13,48 @@
     </a>
 
     <!-- Menu Tengah -->
-    <div class="nav-links">
-      <a href="#" class="nav-link">Beranda</a>
-      <a href="#sejarah" class="nav-link">Sejarah</a>
-      <a href="#misi" class="nav-link">Misi</a>
+    <!-- Tambahkan x-data ke container utama -->
+<div class="nav-links flex gap-4 items-center">
+
+  <a href="/" class="nav-link">Beranda</a>
+
+  <!-- Dropdown Profil Desa -->
+  <div class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+    <button class="nav-link flex items-center gap-1">
+      Profil Desa
+      <svg class="w-4 h-4 mt-[2px]" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.043l3.71-3.81a.75.75 0 111.08 1.04l-4.24 4.36a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+      </svg>
+    </button>
+
+    <div x-show="open" x-transition
+         class="absolute mt-2 bg-white shadow-lg rounded-md w-40 border border-gray-200 z-50">
+      <a href="#sejarah" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sejarah</a>
+      <a href="#misi" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Visi & Misi</a>
     </div>
+  </div>
+
+  <a href="{{ route('komunitas.index') }}" class="nav-link {{ Request::is('komunitas*') ? 'active' : '' }}">Komunitas</a>
+
+  <!-- Dropdown Persuratan -->
+  <div class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+    <button class="nav-link flex items-center gap-1">
+      Persuratan
+      <svg class="w-4 h-4 mt-[2px]" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.043l3.71-3.81a.75.75 0 111.08 1.04l-4.24 4.36a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+      </svg>
+    </button>
+
+    <div x-show="open" x-transition
+         class="absolute mt-2 bg-white shadow-lg rounded-md w-40 border border-gray-200 z-50">
+      <a href="#pengantar" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Surat Pengantar</a>
+      <a href="#domisili" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Surat Domisili</a>
+    </div>
+  </div>
+
+</div>
+
+
 
     <!-- Tombol Login/Register -->
     <div class="auth-buttons">
@@ -84,12 +122,12 @@
 }
 
 .login-btn {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   padding: 8px 20px;
   border-radius: 20px;
   transition: all 0.3s ease;
-  border: 1px solid white;
+  border: 1px solid #00923F;
 }
 .register-btn {
   background-color: #00923F;
@@ -132,7 +170,7 @@
 }
 
 .nav-link {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   position: relative;
 }
@@ -169,8 +207,8 @@
 }
 
 .btn-masuk {
-  border: 1px solid white;
-  color: white;
+  border: 1px solid black;
+  color: black;
   padding: 6px 18px;
   border-radius: 20px;
   font-weight: 500;

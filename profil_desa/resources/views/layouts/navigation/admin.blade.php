@@ -15,6 +15,9 @@
                     <x-nav-link :href="route('admin.dashboard')" :active="request()->routeIs('admin.dashboard')">
                         {{ __('Dashboard Admin') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('admin.komunitas.index')" :active="request()->routeIs('admin.komunitas.index')">
+                        {{ __('Konten') }}
+                    </x-nav-link>
                 </div>
             </div>
 

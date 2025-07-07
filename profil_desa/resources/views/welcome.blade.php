@@ -16,6 +16,7 @@
         height: 100%;
         margin: 0;
         padding: 0;
+        background-color: #ecf2ea;
     }
 
     img {
@@ -132,7 +133,7 @@
         section#misi {
           padding: 60px 20px;
           text-align: center;
-          background-color: #eeeeee;
+          background-color: #ffffff;
         }
 
         section#misi h2 {
@@ -152,7 +153,7 @@
         section#peta {
           padding: 60px 20px;
           text-align: center;
-          background-color: #eeeeee;
+          background-color: #ffffff;
         }
 
         section#peta h2 {
@@ -343,35 +344,48 @@
     </style>
     </head>
     <body class="font-sans antialiased m-0 p-0 flex flex-col min-h-screen">
+      
         <!-- Hero Section -->
-        <div class="relative h-screen">
-            <div class="absolute inset-0 w-full h-full">
-                <img src="{{ asset('images/bgtes.jpg') }}" alt="Background" class="w-full h-full object-cover">
-            </div>
-            <div class="relative h-full flex items-center">
-                <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full">
+    <div class="relative h-[90vh] sm:h-screen">
+      
+        <!-- Background Image -->
+        <div class="absolute inset-0 w-full h-full">
+            <img src="{{ asset('images/bgtes.jpg') }}" alt="Background" class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Overlay Transparan -->
+        <div class="absolute inset-0 bg-black/40 z-10"></div>
+
+        {{-- Svg --}}
+        <div class="absolute inset-x-0 w-full overflow-hidden z-10 ">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="w-full h-auto" preserveAspectRatio="none">
+            <path fill="#ffffff" fill-opacity="1" d="M0,32L80,42.7C160,53,320,75,480,80C640,85,800,75,960,69.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+          </svg>
+        </div>
+
+        <!-- Konten Teks -->
+        <div class="relative z-20 h-full flex items-center">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 w-full">
                 <div class="w-full max-w-7xl mx-auto">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                        <!-- Left Column -->
-                        <div class="text-white">
-                            <h1 class="header-text">
-                                Desa Banjarsari<br>
-                                Surakarta
-                            </h1>
-                            <br>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                        <!-- Kolom kiri -->
+                        <div class="flex flex-col items-start space-y-2">
+                            <h1 id="typing-text" class="header-text whitespace-pre-line text-white m-0 p-0"></h1>
+                            <h3 class="text-white text-lg m-0 p-0">Kec. Telkom Kab. Bandung</h3>
                         </div>
-                        
-                        <!-- Right Column - Can be used for image or other content -->
+
+                        <!-- Kolom kanan -->
                         <div class="hidden lg:block">
-                            <!-- Additional content can be added here -->
+                            <!-- Tambahan konten -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Hero -->
+    </div>
+<!-- End Hero -->
 
-    <section class="stats-card">
+    <section class="absolute z-30 left-1/2 transform -translate-x-1/2 -bottom-12 w-full max-w-5xl px-4">
         <div class="stats-container">
             <div class="stat-box">
             <h2>1.257</h2>
@@ -390,6 +404,8 @@
         </div>
     </section>
     <br>
+
+    <div class="w-[85%] mx-auto shadow-md rounded-2xl p-1 bg-white">
     <section id="sejarah">
         <div class="w-full flex justify-center">
             <div class="max-w-7xl w-full flex flex-col items-center gap-4 phone:gap-2">
@@ -397,153 +413,184 @@
                 <div class="2xl:w-[65%] xl:w-[65%] lg:w-[60%] md:w-[60%] sm:w-full phone:w-full h-full flex flex-col justify-start items-start p-5 2xl:pr-20 xl:pr-10 phone:p-2 lg:pr-8 gap-2 2xl:order-1 xl:order-1 lg:order-1 md:order-1 sm:order-2 phone:order-2">
                     <div class="w-auto h-auto flex flex-col 2xl:self-start xl:self-start lg:self-start md:self-center sm:self-center phone:self-center gap-1">
                     <h2>
-                        Sejarah Desa
+                        Sambutan Kepala Desa
                     </h2>
                     <div class="border-t-4 border-yellow-400 w-20 mx-auto mb-8"></div>
                     </div>
                     <div class="mt-2 font-light text-justify text-base phone:text-xs text-gray-700 reveal-r animate">
-                    Banjarsari (bahasa Jawa: ꦧꦚ꧀ꦗꦂꦱꦫꦶ) adalah salah satu dari lima kecamatan yang ada di Kota Surakarta, Provinsi Jawa Tengah, Indonesia.[1] Kecamatan ini merupakan satu-satunya di kota Surakarta yang sebelum kemerdekaan Indonesia menjadi bagian dari wilayah kota 
-                    raja dari Kadipaten Praja Mangkunegaran; empat kecamatan lainnya merupakan wilayah dari kota raja Kasunanan Surakarta. Di kecamatan ini terletak banyak objek penting bagi kebudayaan dan pariwisata Surakarta: Istana Mangkunegaran, Stadion Manahan, stasiun Solo Balapan (stasiun terbesar di Surakarta), terminal bus Tirtonadi, dan Pasar Legi (pasar pusat bagi kawasan Solo Raya).
-                    Presiden ke-7 Republik Indonesia, Joko Widodo dan ibu negara Iriana Joko Widodo tinggal di kecamatan ini, tepatnya di Kelurahan Sumber setelah purnatugas sebagai presiden Republik Indonesia.[2]
+                   Assalamu'alaikum Warahmatullahi Wabarakatuh, Salam Sejahtera. Selamat datang di website resmi Desa Banjarsari. Sebagai Kepala Desa, saya [Nama Kepala Desa], berkomitmen penuh untuk menghadirkan informasi 
+                   desa yang transparan dan mudah diakses melalui platform ini. Kami berharap website ini dapat menjadi sarana komunikasi dan kolaborasi efektif dalam mewujudkan Desa [Nama Desa] yang maju dan sejahtera. Saran 
+                   dan masukan konstruktif senantiasa kami nantikan. Wassalamu'alaikum Warahmatullahi Wabarakatuh.
+                  <br><br><br>-- AHMAD ZAENURI, KEPALA DESA Banjarsari --
                     </div>
                 </div>
                 <div class="2xl:w-auto xl:w-auto lg:w-auto md:w-auto sm:w-[60%] phone:w-[70%] h-full flex flex-col 2xl:p-8 xl:p-8 lg:p-8 md:p-7 sm:p-8 phone:p-5 sm:order-1 phone:order-1 self-center relative">
                     <img class="h-full w-full bg-cover bg-center self-center z-10 reveal rounded-lg shadow-product animate" src="{{ asset('images/logo.png') }}" alt="">
-                    
-                    
                 </div>
                 </div>
             </div>
         </div>
     </section>
-
-<section id="misi">
-    <h2 class="text-3xl font-bold uppercase mb-4">Visi & Misi Desa</h2>
-    <div class="border-t-4 border-yellow-400 w-20 mx-auto mb-8"></div>
-
-    <!-- VISI -->
-    <div class="mb-10">
-      <h3 class="text-xl font-semibold text-gray-800 mb-2">Visi:</h3>
-      <p class="text-gray-700 italic">
-        “Terwujudnya Desa Mandiri, Sejahtera, dan Berbasis Teknologi serta Kearifan Lokal.”
-      </p>
     </div>
+    <br>
+    
+    {{-- sekilas info --}}
+    <div class="w-[85%] mx-auto rounded-md border border-yellow-300 overflow-hidden shadow-md">
+      <div class="flex">
+        
+        <!-- Label Sekilas Info -->
+        <div class="bg-blue-600 px-4 py-2 text-white font-semibold text-sm flex items-center gap-2 shrink-0">
+          <i class="bx bx-bell text-xl"></i>
+          Sekilas Info
+        </div>
 
-    <!-- MISI -->
-    <div class="grid-container">
-      <div class="card">
-        <h3>Tekad Kami</h3>
-        <p>
-          Meningkatkan kualitas pelayanan publik yang cepat, transparan, dan berbasis teknologi digital.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Tekad Kami</h3>
-        <p>
-          Mendorong kemandirian ekonomi masyarakat desa melalui pengembangan UMKM, pertanian, dan potensi lokal lainnya.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Tekad Kami</h3>
-        <p>
-          Menjaga kelestarian lingkungan hidup dan budaya lokal sebagai aset berharga desa.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Tekad Kami</h3>
-        <p>
-          Mengembangkan infrastruktur desa yang merata dan berkelanjutan.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Tekad Kami</h3>
-        <p>
-          Meningkatkan partisipasi masyarakat dalam pembangunan desa melalui kolaborasi yang inklusif dan demokratis.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Tekad Kami</h3>
-        <p>
-          Memberikan kemudahan untuk semua orang mencari informasi melalui sistem dan platform yang terpercaya, cepat, dan efisien.
-        </p>
-      </div>
-    </div>
-</section>
+        <!-- Marquee -->
+        <div class="bg-yellow-400 flex-1 px-4 py-2">
+          <marquee behavior="scroll" direction="left" scrollamount="6"
+                  class="text-sm text-gray-800 font-medium tracking-wide">
+            Desa Banjarsari akan mengadakan Musyawarah Warga pada tanggal
+            <span class="text-red-600 font-semibold">15 Juli 2025</span>
+            pukul <span class="text-red-600 font-semibold">09.00 WIB</span> di Balai Desa.
+            Hadir tepat waktu ya!
+          </marquee>
+        </div>
 
-<section class="py-10 px-4">
-  <h2 class="text-3xl font-bold text-center mb-4 uppercase">Struktur Organisasi Desa</h2>
-  <div class="border-t-4 border-yellow-400 w-20 mx-auto mb-8"></div>
-  <br><br>
-  <div class="flex flex-col items-center gap-6">
-
-    <!-- Kepala Desa -->
-    <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
-      <img src="{{ asset('images/profile.png') }}" alt="Kepala Desa" class="w-24 h-24 object-cover rounded-full border-2 border-gray-300">
-      <h3 class="mt-2 text-lg font-semibold text-green-700">Kepala Desa</h3>
-      <p class="text-sm text-gray-700">Nama Kepala Desa</p>
-    </div>
-
-    <!-- Sekretaris Desa -->
-    <div class="flex flex-wrap justify-center gap-6 mt-4">
-      <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
-        <img src="{{ asset('images/profile.png') }}" alt="Sekretaris Desa" class="w-20 h-20 object-cover rounded-full border border-gray-300">
-        <h3 class="mt-2 text-md font-semibold text-green-600">Sekretaris Desa</h3>
-        <p class="text-sm text-gray-700">Nama Sekretaris</p>
       </div>
     </div>
 
-    <!-- Kaur & Kasi -->
-    <div class="flex flex-wrap justify-center gap-6 mt-4">
-      <!-- KAUR -->
-      <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
-        <img src="{{ asset('images/profile.png') }}" alt="Kaur Keuangan" class="w-20 h-20 object-cover rounded-full">
-        <h3 class="mt-2 font-semibold text-green-600">Kaur Keuangan</h3>
-        <p class="text-sm text-gray-700">Nama Petugas</p>
-      </div>
-      <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
-        <img src="{{ asset('images/profile.png') }}" alt="Kaur Umum" class="w-20 h-20 object-cover rounded-full">
-        <h3 class="mt-2 font-semibold text-green-600">Kaur Umum & TU</h3>
-        <p class="text-sm text-gray-700">Nama Petugas</p>
-      </div>
+    <br>
 
-      <!-- KASI -->
-      <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
-        <img src="{{ asset('images/profile.png') }}" alt="Kasi Pemerintahan" class="w-20 h-20 object-cover rounded-full">
-        <h3 class="mt-2 font-semibold text-green-600">Kasi Pemerintahan</h3>
-        <p class="text-sm text-gray-700">Nama Petugas</p>
-      </div>
-      <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
-        <img src="{{ asset('images/profile.png') }}" alt="Kasi Pelayanan" class="w-20 h-20 object-cover rounded-full">
-        <h3 class="mt-2 font-semibold text-green-600">Kasi Pelayanan</h3>
-        <p class="text-sm text-gray-700">Nama Petugas</p>
-      </div>
+<div class="w-[85%] mx-auto shadow-md rounded-2xl bg-white">
+  <div class="flex flex-col md:flex-row gap-6 h-[600px] p-4">
+
+    <!-- Carousel Konten Komunitas (Kiri) -->
+    <div x-data="carousel()" class="w-[70%] relative overflow-hidden rounded-lg h-full shadow-lg">
+      <template x-for="(slide, index) in slides" :key="index">
+        <div x-show="currentIndex === index" class="relative w-full h-full transition-all duration-500 ease-in-out">
+          <img :src="slide.image" alt="Slide Image"
+               class="w-full h-full object-cover rounded-lg" />
+          <div class="absolute bottom-0 left-0 bg-black/50 text-white p-4 w-full">
+            <h2 class="text-xl font-bold" x-text="slide.title"></h2>
+          </div>
+        </div>
+      </template>
+
+      <!-- Tombol navigasi -->
+      <button @click="prev"
+              class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black/30 text-white px-3 py-1 rounded-r z-10 hover:bg-black/60">‹</button>
+      <button @click="next"
+              class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black/30 text-white px-3 py-1 rounded-l z-10 hover:bg-black/60">›</button>
     </div>
 
-    <!-- Kepala Dusun -->
-    <div class="flex flex-wrap justify-center gap-6 mt-6">
-      <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
-        <img src="{{ asset('images/profile.png') }}" alt="Kepala Dusun 1" class="w-20 h-20 object-cover rounded-full">
-        <h3 class="mt-2 font-semibold text-green-600">Kepala Dusun 1</h3>
-        <p class="text-sm text-gray-700">Nama Petugas</p>
+    <!-- Konten Aktif (Kanan) -->
+    @if($kontens->count())
+      @php $utama = $kontens->first(); @endphp
+      <div class="w-[30%] bg-yellow-600 text-white p-6 rounded-lg flex flex-col justify-between h-full shadow-lg">
+        <div>
+          <img src="{{ asset('storage/' . $utama->cover) }}"
+               class="rounded-md mb-4 h-64 w-full object-cover shadow" 
+               alt="Cover Konten">
+          <h3 class="text-xl font-bold leading-snug break-words whitespace-normal">{{ $utama->judul }}</h3>
+          <p class="text-sm mt-3 text-white/90 line-clamp-3">
+            {{ \Illuminate\Support\Str::limit(strip_tags($utama->deskripsi), 120) }}
+          </p>
+        </div>
+        <div class="mt-4">
+          <a href="{{ route('landing.komunitas.show', $utama->id) }}"
+             class="inline-block bg-blue-600 text-white hover:bg-blue-800 text-yellow-800 font-semibold px-4 py-2 rounded hover:bg-yellow-300 transition">
+            Selengkapnya →
+          </a>
+        </div>
       </div>
-      <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
-        <img src="{{ asset('images/profile.png') }}" alt="Kepala Dusun 2" class="w-20 h-20 object-cover rounded-full">
-        <h3 class="mt-2 font-semibold text-green-600">Kepala Dusun 2</h3>
-        <p class="text-sm text-gray-700">Nama Petugas</p>
-      </div>
-    </div>
+    @endif
+
   </div>
-</section>
-
-<section id="peta" class="my-10">
-  <h2 class="text-3xl font-bold uppercase mb-4 text-center">Peta Desa</h2>
-  <div class="border-t-4 border-yellow-400 w-20 mx-auto mb-8"></div>
-
-  <!-- Container Peta -->
-  <div id="map" class="w-[80%] h-96 rounded-lg shadow-md mx-auto"></div>
-</section>
+</div>
 
 
+
+
+    <br>
+
+    <div class="w-[85%] mx-auto shadow-md rounded-2xl p-1 bg-white">
+    <section class="py-10 px-4">
+      <h2 class="text-3xl font-bold text-center mb-4 uppercase">Struktur Organisasi Desa</h2>
+      <div class="border-t-4 border-yellow-400 w-20 mx-auto mb-8"></div>
+      <br><br>
+      <div class="flex flex-col items-center gap-6">
+
+        <!-- Kepala Desa -->
+        <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
+          <img src="{{ asset('images/profile.png') }}" alt="Kepala Desa" class="w-24 h-24 object-cover rounded-full border-2 border-gray-300">
+          <h3 class="mt-2 text-lg font-semibold text-green-700">Kepala Desa</h3>
+          <p class="text-sm text-gray-700">Nama Kepala Desa</p>
+        </div>
+
+        <!-- Sekretaris Desa -->
+        <div class="flex flex-wrap justify-center gap-6 mt-4">
+          <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
+            <img src="{{ asset('images/profile.png') }}" alt="Sekretaris Desa" class="w-20 h-20 object-cover rounded-full border border-gray-300">
+            <h3 class="mt-2 text-md font-semibold text-green-600">Sekretaris Desa</h3>
+            <p class="text-sm text-gray-700">Nama Sekretaris</p>
+          </div>
+        </div>
+
+        <!-- Kaur & Kasi -->
+        <div class="flex flex-wrap justify-center gap-6 mt-4">
+          <!-- KAUR -->
+          <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
+            <img src="{{ asset('images/profile.png') }}" alt="Kaur Keuangan" class="w-20 h-20 object-cover rounded-full">
+            <h3 class="mt-2 font-semibold text-green-600">Kaur Keuangan</h3>
+            <p class="text-sm text-gray-700">Nama Petugas</p>
+          </div>
+          <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
+            <img src="{{ asset('images/profile.png') }}" alt="Kaur Umum" class="w-20 h-20 object-cover rounded-full">
+            <h3 class="mt-2 font-semibold text-green-600">Kaur Umum & TU</h3>
+            <p class="text-sm text-gray-700">Nama Petugas</p>
+          </div>
+
+          <!-- KASI -->
+          <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
+            <img src="{{ asset('images/profile.png') }}" alt="Kasi Pemerintahan" class="w-20 h-20 object-cover rounded-full">
+            <h3 class="mt-2 font-semibold text-green-600">Kasi Pemerintahan</h3>
+            <p class="text-sm text-gray-700">Nama Petugas</p>
+          </div>
+          <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
+            <img src="{{ asset('images/profile.png') }}" alt="Kasi Pelayanan" class="w-20 h-20 object-cover rounded-full">
+            <h3 class="mt-2 font-semibold text-green-600">Kasi Pelayanan</h3>
+            <p class="text-sm text-gray-700">Nama Petugas</p>
+          </div>
+        </div>
+
+        <!-- Kepala Dusun -->
+        <div class="flex flex-wrap justify-center gap-6 mt-6">
+          <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
+            <img src="{{ asset('images/profile.png') }}" alt="Kepala Dusun 1" class="w-20 h-20 object-cover rounded-full">
+            <h3 class="mt-2 font-semibold text-green-600">Kepala Dusun 1</h3>
+            <p class="text-sm text-gray-700">Nama Petugas</p>
+          </div>
+          <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
+            <img src="{{ asset('images/profile.png') }}" alt="Kepala Dusun 2" class="w-20 h-20 object-cover rounded-full">
+            <h3 class="mt-2 font-semibold text-green-600">Kepala Dusun 2</h3>
+            <p class="text-sm text-gray-700">Nama Petugas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+    <br>
+
+    <div class="w-[85%] mx-auto shadow-md rounded-2xl p-1 bg-white">
+    <section id="peta" class="">
+      <h2 class="text-3xl font-bold uppercase mb-4 text-center">Peta Desa</h2>
+      <div class="border-t-4 border-yellow-400 w-20 mx-auto mb-8"></div>
+
+      <!-- Container Peta -->
+      <div id="map" class="w-[80%] h-96 rounded-lg shadow-md mx-auto"></div>
+    </section>
+    </div>
+    <br><br><br><br>
+    
   {{-- Footer (Only for regular users) --}}
             <footer class="bg-[#00923F] text-white py-4">
                 <div class="container d-flex justify-content-between align-items-center">
@@ -564,6 +611,40 @@
     </div>
 
     <script>
+      function carousel() {
+          return {
+              currentIndex: 0,
+              slides: @json($slides), // <-- pastikan ini menghasilkan data valid
+              prev() {
+                  this.currentIndex = (this.currentIndex === 0) ? this.slides.length - 1 : this.currentIndex - 1;
+              },
+              next() {
+                  this.currentIndex = (this.currentIndex === this.slides.length - 1) ? 0 : this.currentIndex + 1;
+              }
+          };
+      }
+
+      // Typing text
+      const text = "SISTEM INFORMASI DESA BANJARSARI";
+      const target = document.getElementById("typing-text");
+      let index = 0;
+
+      function typeWriter() {
+          if (index < text.length) {
+              target.innerHTML += text.charAt(index) === "\n" ? "<br>" : text.charAt(index);
+              index++;
+              setTimeout(typeWriter, 100); // Kecepatan ketik
+          } else {
+              setTimeout(() => {
+                  target.innerHTML = ""; // Hapus tulisan
+                  index = 0;             // Reset index
+                  typeWriter();          // Mulai ulang
+              }, 2000); // Jeda sebelum mengulang lagi (dalam ms)
+          }
+      }
+
+      document.addEventListener("DOMContentLoaded", typeWriter);
+
       // Koordinat Banjarsari, Surakarta
       const desaLat = -7.559575;
       const desaLng = 110.822467;

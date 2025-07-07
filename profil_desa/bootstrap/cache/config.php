@@ -6,7 +6,7 @@
   14 => 'view',
   'app' => 
   array (
-    'name' => 'Laravel',
+    'name' => 'Banjarsari',
     'env' => 'local',
     'debug' => true,
     'url' => 'http://localhost:8000',
@@ -203,7 +203,7 @@
         'driver' => 'octane',
       ),
     ),
-    'prefix' => 'laravel_cache_',
+    'prefix' => 'banjarsari_cache_',
   ),
   'database' => 
   array (
@@ -301,7 +301,7 @@
       'options' => 
       array (
         'cluster' => 'redis',
-        'prefix' => 'laravel_database_',
+        'prefix' => 'banjarsari_database_',
         'persistent' => false,
       ),
       'default' => 
@@ -530,7 +530,7 @@
     'from' => 
     array (
       'address' => 'hello@example.com',
-      'name' => 'Laravel',
+      'name' => 'Banjarsari',
     ),
     'markdown' => 
     array (
@@ -641,7 +641,7 @@
       0 => 2,
       1 => 100,
     ),
-    'cookie' => 'laravel_session',
+    'cookie' => 'banjarsari_session',
     'path' => '/',
     'domain' => NULL,
     'secure' => NULL,

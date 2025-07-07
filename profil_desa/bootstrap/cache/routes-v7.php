@@ -13,7 +13,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Q9TSFBT4XnMGvA6j',
+            '_route' => 'generated::JavhTUYsesHnrE1z',
           ),
           1 => NULL,
           2 => 
@@ -33,7 +33,27 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::3eBPbgrAjEgmenQJ',
+            '_route' => 'generated::nmNtina8OBJEPTaD',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/komunitasview' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'komunitas.index',
           ),
           1 => NULL,
           2 => 
@@ -122,7 +142,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::xkDUUoZeWFqpZZJV',
+            '_route' => 'generated::OtjFbRbmWzq4Qzao',
           ),
           1 => NULL,
           2 => 
@@ -158,7 +178,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::eWZ3Mul9y4dfFGET',
+            '_route' => 'generated::WafE2A6IM4kx8lPw',
           ),
           1 => NULL,
           2 => 
@@ -288,7 +308,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::HDTdML6mb6A4ELxX',
+            '_route' => 'generated::IlS30grVUaik4OaC',
           ),
           1 => NULL,
           2 => 
@@ -359,6 +379,82 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/user/komunitas' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'user.komunitas',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/komunitas' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.komunitas.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'user.komunitas.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/komunitas/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'user.komunitas.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/admin/dashboard' => 
       array (
         0 => 
@@ -382,11 +478,144 @@ app('router')->setCompiledRoutes(
     ),
     2 => 
     array (
-      0 => '{^(?|/reset\\-password/([^/]++)(*:32)|/verify\\-email/([^/]++)/([^/]++)(*:71)|/storage/(.*)(*:91))/?$}sDu',
+      0 => '{^(?|/komunitas(?|view/([^/]++)(*:33)|/([^/]++)(?|(*:52)|/(?|edit(*:67)|status(*:80))|(*:88)))|/reset\\-password/([^/]++)(*:122)|/verify\\-email/([^/]++)/([^/]++)(*:162)|/admin/komunitas/([^/]++)(*:195)|/storage/(.*)(*:216))/?$}sDu',
     ),
     3 => 
     array (
-      32 => 
+      33 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'landing.komunitas.show',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      52 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'user.komunitas.show',
+          ),
+          1 => 
+          array (
+            0 => 'komunita',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      67 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'user.komunitas.edit',
+          ),
+          1 => 
+          array (
+            0 => 'komunita',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      80 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.komunitas.updateStatus',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'PATCH' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      88 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'user.komunitas.update',
+          ),
+          1 => 
+          array (
+            0 => 'komunita',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+            'PATCH' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'user.komunitas.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'komunita',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      122 => 
       array (
         0 => 
         array (
@@ -409,7 +638,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      71 => 
+      162 => 
       array (
         0 => 
         array (
@@ -433,7 +662,30 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      91 => 
+      195 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'komunitas.show',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      216 => 
       array (
         0 => 
         array (
@@ -471,7 +723,7 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
-    'generated::Q9TSFBT4XnMGvA6j' => 
+    'generated::JavhTUYsesHnrE1z' => 
     array (
       'methods' => 
       array (
@@ -500,7 +752,7 @@ app('router')->setCompiledRoutes(
                         \'exception\' => $exception,
                     ]), status: $exception ? 500 : 200);
                 }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000004c20000000000000000";}}',
-        'as' => 'generated::Q9TSFBT4XnMGvA6j',
+        'as' => 'generated::JavhTUYsesHnrE1z',
       ),
       'fallback' => false,
       'defaults' => 
@@ -516,7 +768,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::3eBPbgrAjEgmenQJ' => 
+    'generated::nmNtina8OBJEPTaD' => 
     array (
       'methods' => 
       array (
@@ -530,15 +782,88 @@ app('router')->setCompiledRoutes(
         array (
           0 => 'web',
         ),
-        'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:44:"function () {
-    return \\view(\'welcome\');
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000004c80000000000000000";}}',
+        'uses' => 'App\\http\\Controllers\\LandingController@landing',
+        'controller' => 'App\\http\\Controllers\\LandingController@landing',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'generated::3eBPbgrAjEgmenQJ',
+        'as' => 'generated::nmNtina8OBJEPTaD',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'komunitas.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'komunitasview',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\http\\Controllers\\LandingController@komunitasIndex',
+        'controller' => 'App\\http\\Controllers\\LandingController@komunitasIndex',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'komunitas.index',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'landing.komunitas.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'komunitasview/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\http\\Controllers\\LandingController@showkomunitas',
+        'controller' => 'App\\http\\Controllers\\LandingController@showkomunitas',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'landing.komunitas.show',
       ),
       'fallback' => false,
       'defaults' => 
@@ -704,7 +1029,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::xkDUUoZeWFqpZZJV' => 
+    'generated::OtjFbRbmWzq4Qzao' => 
     array (
       'methods' => 
       array (
@@ -725,7 +1050,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::xkDUUoZeWFqpZZJV',
+        'as' => 'generated::OtjFbRbmWzq4Qzao',
       ),
       'fallback' => false,
       'defaults' => 
@@ -779,7 +1104,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::eWZ3Mul9y4dfFGET' => 
+    'generated::WafE2A6IM4kx8lPw' => 
     array (
       'methods' => 
       array (
@@ -800,7 +1125,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::eWZ3Mul9y4dfFGET',
+        'as' => 'generated::WafE2A6IM4kx8lPw',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1120,7 +1445,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::HDTdML6mb6A4ELxX' => 
+    'generated::IlS30grVUaik4OaC' => 
     array (
       'methods' => 
       array (
@@ -1141,7 +1466,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::HDTdML6mb6A4ELxX',
+        'as' => 'generated::IlS30grVUaik4OaC',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1270,6 +1595,316 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'user.komunitas' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'user/komunitas',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'userMiddleware',
+        ),
+        'uses' => 'App\\Http\\Controllers\\user\\KomunitasController@index',
+        'controller' => 'App\\Http\\Controllers\\user\\KomunitasController@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'user.komunitas',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.komunitas.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'komunitas',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'adminMiddleware',
+        ),
+        'uses' => 'App\\Http\\Controllers\\admin\\KomunitasApprovalController@index',
+        'controller' => 'App\\Http\\Controllers\\admin\\KomunitasApprovalController@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.komunitas.index',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'user.komunitas.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'komunitas/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'userMiddleware',
+        ),
+        'as' => 'user.komunitas.create',
+        'uses' => 'App\\Http\\Controllers\\user\\KomunitasController@create',
+        'controller' => 'App\\Http\\Controllers\\user\\KomunitasController@create',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'user.komunitas.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'komunitas',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'userMiddleware',
+        ),
+        'as' => 'user.komunitas.store',
+        'uses' => 'App\\Http\\Controllers\\user\\KomunitasController@store',
+        'controller' => 'App\\Http\\Controllers\\user\\KomunitasController@store',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'user.komunitas.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'komunitas/{komunita}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'userMiddleware',
+        ),
+        'as' => 'user.komunitas.show',
+        'uses' => 'App\\Http\\Controllers\\user\\KomunitasController@show',
+        'controller' => 'App\\Http\\Controllers\\user\\KomunitasController@show',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'user.komunitas.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'komunitas/{komunita}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'userMiddleware',
+        ),
+        'as' => 'user.komunitas.edit',
+        'uses' => 'App\\Http\\Controllers\\user\\KomunitasController@edit',
+        'controller' => 'App\\Http\\Controllers\\user\\KomunitasController@edit',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'user.komunitas.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+        1 => 'PATCH',
+      ),
+      'uri' => 'komunitas/{komunita}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'userMiddleware',
+        ),
+        'as' => 'user.komunitas.update',
+        'uses' => 'App\\Http\\Controllers\\user\\KomunitasController@update',
+        'controller' => 'App\\Http\\Controllers\\user\\KomunitasController@update',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'user.komunitas.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'komunitas/{komunita}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'userMiddleware',
+        ),
+        'as' => 'user.komunitas.destroy',
+        'uses' => 'App\\Http\\Controllers\\user\\KomunitasController@destroy',
+        'controller' => 'App\\Http\\Controllers\\user\\KomunitasController@destroy',
+        'namespace' => NULL,
+        'prefix' => '/',
+        'where' => 
+        array (
+        ),
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'admin.dashboard' => 
     array (
       'methods' => 
@@ -1309,6 +1944,83 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
+    'komunitas.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/komunitas/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'adminMiddleware',
+        ),
+        'uses' => 'App\\Http\\Controllers\\admin\\KomunitasApprovalController@show',
+        'controller' => 'App\\Http\\Controllers\\admin\\KomunitasApprovalController@show',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'komunitas.show',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.komunitas.updateStatus' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PATCH',
+      ),
+      'uri' => 'komunitas/{id}/status',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'adminMiddleware',
+        ),
+        'uses' => 'App\\Http\\Controllers\\admin\\KomunitasApprovalController@updateStatus',
+        'controller' => 'App\\Http\\Controllers\\admin\\KomunitasApprovalController@updateStatus',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.komunitas.updateStatus',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
     'storage.local' => 
     array (
       'methods' => 
@@ -1325,7 +2037,7 @@ app('router')->setCompiledRoutes(
                         $config,
                         $isProduction
                     ))($request, $path);
-                }";s:5:"scope";s:47:"Illuminate\\Filesystem\\FilesystemServiceProvider";s:4:"this";N;s:4:"self";s:32:"00000000000004ca0000000000000000";}}',
+                }";s:5:"scope";s:47:"Illuminate\\Filesystem\\FilesystemServiceProvider";s:4:"this";N;s:4:"self";s:32:"00000000000004c70000000000000000";}}',
         'as' => 'storage.local',
       ),
       'fallback' => false,
