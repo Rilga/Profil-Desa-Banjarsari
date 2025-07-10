@@ -13,10 +13,13 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link :href="route('admin.dashboard')" :active="request()->routeIs('admin.dashboard')">
-                        {{ __('Dashboard Admin') }}
+                        {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('admin.komunitas.index')" :active="request()->routeIs('admin.komunitas.index')">
-                        {{ __('Konten') }}
+                    <x-nav-link :href="route('admin.berita')" :active="request()->routeIs('admin.berita')">
+                        {{ __('Berita') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('admin.datalandingpage')" :active="request()->routeIs('admin.datalandingpage')">
+                        {{ __('Data Landing') }}
                     </x-nav-link>
                 </div>
             </div>

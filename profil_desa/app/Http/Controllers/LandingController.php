@@ -1,17 +1,30 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
-use App\Models\User\Komunitas;
+use App\Models\Admin\Berita;
+use App\Models\Admin\Info;
+use App\Models\Admin\Sambutan;
 
 class LandingController extends Controller
 {
     public function landing()
     {
-        $kontens = Komunitas::where('status', 'approved')->latest()->get();
+        // Ambil semua berita terbaru
+        $kontens = Berita::latest()->take(5)->get();
 
+        // Siapkan data slide dari gambar berita
         $slides = $kontens->map(function ($konten) {
-            $gambarTambahan = json_decode($konten->gambar, true);
+            // Jika gambar masih string, ubah ke array
+            $gambarTambahan = is_string($konten->gambar)
+                ? json_decode($konten->gambar, true)
+                : $konten->gambar;
+
+            // Pastikan array valid
+            $gambarTambahan = is_array($gambarTambahan) ? $gambarTambahan : [];
+
+            // Ambil gambar pertama dari array, atau fallback ke cover
             $gambarUtama = $gambarTambahan[0] ?? $konten->cover;
 
             return [
@@ -20,30 +33,36 @@ class LandingController extends Controller
             ];
         });
 
-        return view('welcome', compact('kontens', 'slides'));
+        $sambutan = Sambutan::first();
+
+        $infos = Info::latest()->get();
+
+        return view('welcome', compact('kontens', 'slides', 'sambutan', 'infos'));
     }
 
-    public function komunitasIndex(Request $request)
+    public function visimisi()
     {
-        $query = Komunitas::where('status', 'approved');
-
-        // Jika ada keyword pencarian
-        if ($request->has('q') && $request->q != '') {
-            $keyword = $request->q;
-            $query->where(function ($q) use ($keyword) {
-                $q->where('judul', 'like', "%{$keyword}%");
-            });
-        }
-
-        $kontens = $query->latest()->paginate(6);
-        return view('komunitas', compact('kontens'));
+        return view('visimisi');
     }
 
-    public function showkomunitas($id)
+    public function berita()
     {
-        $konten = Komunitas::with('user')->findOrFail($id);
-        $konten->increment('dibaca'); // auto tambah 1 view
-        return view('komunitas.show', compact('konten'));
+        $kontens = Berita::latest()->paginate(6);
+
+        return view('berita', compact('kontens'));
+    }
+    public function showberita($id)
+    {
+        $kontens = Berita::with('user')->findOrFail($id);
+
+        // Tambah 1 ke jumlah dibaca
+        $kontens->increment('dibaca');
+
+        return view('berita.show', compact('kontens'));
     }
 
+    public function sejarah()
+    {
+        return view('sejarah');
+    }
 }

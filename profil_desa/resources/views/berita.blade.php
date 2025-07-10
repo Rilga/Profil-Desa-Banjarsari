@@ -15,11 +15,11 @@
 </style>
 
 <!-- Hero Section -->
-<div class="absolute w-full overflow-hidden z-10 ">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <div class="absolute w-full overflow-hidden z-10 ">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#ffffff" fill-opacity="1" d="M0,32L80,42.7C160,53,320,75,480,80C640,85,800,75,960,69.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-          </svg>
-        </div>
+        </svg>
+    </div>
         <br>
 <section class="relative w-full py-20 overflow-hidden">
     <div class="absolute inset-0">
@@ -40,7 +40,7 @@
 
 <!-- Search Bar -->
 <div class="max-w-3xl mx-auto -mt-10 mb-12 px-4 z-10 relative">
-    <form method="GET" action="{{ route('komunitas.index') }}">
+    <form method="GET" action="">
         <input type="text" name="q" value="{{ request('q') }}" placeholder="Cari komunitas atau kegiatan..."
                class="w-full border border-green-300 bg-white rounded-full px-6 py-3 shadow-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition">
     </form>
@@ -83,7 +83,7 @@
                             <span>{{ $konten->dibaca }}</span>
                         </div>
                     </div>
-                    <a href="{{ route('landing.komunitas.show', $konten->id) }}"
+                    <a href="{{ route('user.berita.show', $konten->id) }}"
                        class="ml-3 text-sm bg-green-600 text-white px-3 py-2 rounded hover:bg-green-700 transition whitespace-nowrap">
                         Selengkapnya →
                     </a>

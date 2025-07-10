@@ -406,176 +406,118 @@
     <br>
 
     <div class="w-[85%] mx-auto shadow-md rounded-2xl p-1 bg-white">
-    <section id="sejarah">
-        <div class="w-full flex justify-center">
-            <div class="max-w-7xl w-full flex flex-col items-center gap-4 phone:gap-2">
-                <div class="w-full 2xl:h-[calc((100vw-24rem)*9/24)] xl:h-[calc((100vw-22rem)*9/19)] lg:h-[calc((100vw-10rem)*9/19)] md:h-[calc((100vw-8rem)*9/16)] sm:h-auto phone:h-auto flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-col phone:flex-col 2xl:items-start xl:items-start lg:items-start md:items-center sm:items-center phone:items-center rounded-md mb-4">
-                <div class="2xl:w-[65%] xl:w-[65%] lg:w-[60%] md:w-[60%] sm:w-full phone:w-full h-full flex flex-col justify-start items-start p-5 2xl:pr-20 xl:pr-10 phone:p-2 lg:pr-8 gap-2 2xl:order-1 xl:order-1 lg:order-1 md:order-1 sm:order-2 phone:order-2">
-                    <div class="w-auto h-auto flex flex-col 2xl:self-start xl:self-start lg:self-start md:self-center sm:self-center phone:self-center gap-1">
-                    <h2>
-                        Sambutan Kepala Desa
-                    </h2>
-                    <div class="border-t-4 border-yellow-400 w-20 mx-auto mb-8"></div>
+        <section id="sejarah">
+            <div class="w-full flex justify-center">
+                <div class="max-w-7xl w-full flex flex-col items-center gap-4 phone:gap-2">
+                    <div class="w-full 2xl:h-[calc((100vw-24rem)*9/24)] xl:h-[calc((100vw-22rem)*9/19)] lg:h-[calc((100vw-10rem)*9/19)] md:h-[calc((100vw-8rem)*9/16)] sm:h-auto phone:h-auto flex 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-col phone:flex-col 2xl:items-start xl:items-start lg:items-start md:items-center sm:items-center phone:items-center rounded-md mb-4">
+                        <div class="2xl:w-[65%] xl:w-[65%] lg:w-[60%] md:w-[60%] sm:w-full phone:w-full h-full flex flex-col justify-start items-start p-5 2xl:pr-20 xl:pr-10 phone:p-2 lg:pr-8 gap-2 2xl:order-1 xl:order-1 lg:order-1 md:order-1 sm:order-2 phone:order-2">
+                            <div class="w-auto h-auto flex flex-col gap-1">
+                                <h2>Sambutan Kepala Desa</h2>
+                                <div class="border-t-4 border-yellow-400 w-20 mx-auto mb-8"></div>
+                            </div>
+                            <div class="mt-2 font-light text-justify text-base phone:text-xs text-gray-700 reveal-r animate">
+                                {!! nl2br(e($sambutan->sambutan ?? 'Belum ada sambutan.')) !!}
+                                @if(!empty($sambutan->nama_kepala_desa))
+                                    <br><br><br>— {{ strtoupper($sambutan->nama_kepala_desa) }}, KEPALA DESA BANJARSARI —
+                                @endif
+                            </div>
+                        </div>
+                        <div class="2xl:w-auto xl:w-auto lg:w-auto md:w-auto sm:w-[60%] phone:w-[70%] h-full flex flex-col 2xl:p-8 xl:p-8 lg:p-8 md:p-7 sm:p-8 phone:p-5 sm:order-1 phone:order-1 self-center relative">
+                            @if (!empty($sambutan->foto))
+                                <img src="{{ asset('storage/' . $sambutan->foto) }}"
+                                    class="h-full w-full bg-cover bg-center self-center z-10 reveal rounded-lg shadow-product animate"
+                                    alt="Foto Kepala Desa">
+                            @else
+                                <img src="{{ asset('images/logo.png') }}" alt="Default"
+                                    class="h-full w-full bg-cover bg-center self-center z-10 reveal rounded-lg shadow-product animate" />
+                            @endif
+                        </div>
                     </div>
-                    <div class="mt-2 font-light text-justify text-base phone:text-xs text-gray-700 reveal-r animate">
-                   Assalamu'alaikum Warahmatullahi Wabarakatuh, Salam Sejahtera. Selamat datang di website resmi Desa Banjarsari. Sebagai Kepala Desa, saya [Nama Kepala Desa], berkomitmen penuh untuk menghadirkan informasi 
-                   desa yang transparan dan mudah diakses melalui platform ini. Kami berharap website ini dapat menjadi sarana komunikasi dan kolaborasi efektif dalam mewujudkan Desa [Nama Desa] yang maju dan sejahtera. Saran 
-                   dan masukan konstruktif senantiasa kami nantikan. Wassalamu'alaikum Warahmatullahi Wabarakatuh.
-                  <br><br><br>-- AHMAD ZAENURI, KEPALA DESA Banjarsari --
-                    </div>
-                </div>
-                <div class="2xl:w-auto xl:w-auto lg:w-auto md:w-auto sm:w-[60%] phone:w-[70%] h-full flex flex-col 2xl:p-8 xl:p-8 lg:p-8 md:p-7 sm:p-8 phone:p-5 sm:order-1 phone:order-1 self-center relative">
-                    <img class="h-full w-full bg-cover bg-center self-center z-10 reveal rounded-lg shadow-product animate" src="{{ asset('images/logo.png') }}" alt="">
-                </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     </div>
     <br>
     
     {{-- sekilas info --}}
-    <div class="w-[85%] mx-auto rounded-md border border-yellow-300 overflow-hidden shadow-md">
-      <div class="flex">
-        
-        <!-- Label Sekilas Info -->
-        <div class="bg-blue-600 px-4 py-2 text-white font-semibold text-sm flex items-center gap-2 shrink-0">
-          <i class="bx bx-bell text-xl"></i>
-          Sekilas Info
-        </div>
+@if($infos->count())
+    <div class="w-[85%] mx-auto rounded-md border border-yellow-300 overflow-hidden shadow-md mb-6">
+        <div class="flex">
+            
+            <!-- Label Sekilas Info -->
+            <div class="bg-blue-600 px-4 py-2 text-white font-semibold text-sm flex items-center gap-2 shrink-0">
+                <i class="bx bx-bell text-xl"></i>
+                Sekilas Info
+            </div>
 
-        <!-- Marquee -->
-        <div class="bg-yellow-400 flex-1 px-4 py-2">
-          <marquee behavior="scroll" direction="left" scrollamount="6"
-                  class="text-sm text-gray-800 font-medium tracking-wide">
-            Desa Banjarsari akan mengadakan Musyawarah Warga pada tanggal
-            <span class="text-red-600 font-semibold">15 Juli 2025</span>
-            pukul <span class="text-red-600 font-semibold">09.00 WIB</span> di Balai Desa.
-            Hadir tepat waktu ya!
-          </marquee>
-        </div>
+            <!-- Marquee dari DB -->
+            <div class="bg-yellow-400 flex-1 px-4 py-2">
+                <marquee behavior="scroll" direction="left" scrollamount="7"
+                         class="text-sm text-gray-800 font-medium tracking-wide">
+                    @foreach($infos as $info)
+                        {{ $info->sekilas_info }}
+                        @if(!$loop->last) &nbsp;&nbsp;•&nbsp;&nbsp; @endif
+                    @endforeach
+                </marquee>
+            </div>
 
-      </div>
+        </div>
     </div>
+@endif
+
 
     <br>
 
-<div class="w-[85%] mx-auto shadow-md rounded-2xl bg-white">
-  <div class="flex flex-col md:flex-row gap-6 h-[600px] p-4">
+    <div class="w-[85%] mx-auto shadow-md rounded-2xl bg-white">
+      <div class="flex flex-col md:flex-row gap-6 h-[600px] p-4">
 
-    <!-- Carousel Konten Komunitas (Kiri) -->
-    <div x-data="carousel()" class="w-[70%] relative overflow-hidden rounded-lg h-full shadow-lg">
-      <template x-for="(slide, index) in slides" :key="index">
-        <div x-show="currentIndex === index" class="relative w-full h-full transition-all duration-500 ease-in-out">
-          <img :src="slide.image" alt="Slide Image"
-               class="w-full h-full object-cover rounded-lg" />
-          <div class="absolute bottom-0 left-0 bg-black/50 text-white p-4 w-full">
-            <h2 class="text-xl font-bold" x-text="slide.title"></h2>
+        <!-- Carousel Konten Komunitas (Kiri) -->
+        <div x-data="carousel()" class="w-[70%] relative overflow-hidden rounded-lg h-full shadow-lg">
+          <template x-for="(slide, index) in slides" :key="index">
+            <div x-show="currentIndex === index" class="relative w-full h-full transition-all duration-500 ease-in-out">
+              <img :src="slide.image" alt="Slide Image"
+                  class="w-full h-full object-cover rounded-lg" />
+              <div class="absolute bottom-0 left-0 bg-black/50 text-white p-4 w-full">
+                <h2 class="text-xl font-bold" x-text="slide.title"></h2>
+              </div>
+            </div>
+          </template>
+
+          <!-- Tombol navigasi -->
+          <button @click="prev"
+                  class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black/30 text-white px-3 py-1 rounded-r z-10 hover:bg-black/60">‹</button>
+          <button @click="next"
+                  class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black/30 text-white px-3 py-1 rounded-l z-10 hover:bg-black/60">›</button>
+        </div>
+
+        <!-- Konten Aktif (Kanan) -->
+        @if($kontens->count())
+          @php $utama = $kontens->first(); @endphp
+          <div class="w-[30%] bg-yellow-600 text-white p-6 rounded-lg flex flex-col justify-between h-full shadow-lg">
+            <div>
+              <img src="{{ asset('storage/' . $utama->cover) }}"
+                  class="rounded-md mb-4 h-64 w-full object-cover shadow" 
+                  alt="Cover Konten">
+              <h3 class="text-xl font-bold leading-snug break-words whitespace-normal">{{ $utama->judul }}</h3>
+              <p class="text-sm mt-3 text-white/90 line-clamp-3">
+                {{ \Illuminate\Support\Str::limit(strip_tags($utama->deskripsi), 120) }}
+              </p>
+            </div>
+            <div class="mt-4">
+              <a href="{{ route('user.berita.show', $utama->id) }}"
+                class="inline-block bg-blue-600 text-white hover:bg-blue-800 text-yellow-800 font-semibold px-4 py-2 rounded hover:bg-yellow-300 transition">
+                Selengkapnya →
+              </a>
+            </div>
           </div>
-        </div>
-      </template>
+        @endif
 
-      <!-- Tombol navigasi -->
-      <button @click="prev"
-              class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-black/30 text-white px-3 py-1 rounded-r z-10 hover:bg-black/60">‹</button>
-      <button @click="next"
-              class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-black/30 text-white px-3 py-1 rounded-l z-10 hover:bg-black/60">›</button>
-    </div>
-
-    <!-- Konten Aktif (Kanan) -->
-    @if($kontens->count())
-      @php $utama = $kontens->first(); @endphp
-      <div class="w-[30%] bg-yellow-600 text-white p-6 rounded-lg flex flex-col justify-between h-full shadow-lg">
-        <div>
-          <img src="{{ asset('storage/' . $utama->cover) }}"
-               class="rounded-md mb-4 h-64 w-full object-cover shadow" 
-               alt="Cover Konten">
-          <h3 class="text-xl font-bold leading-snug break-words whitespace-normal">{{ $utama->judul }}</h3>
-          <p class="text-sm mt-3 text-white/90 line-clamp-3">
-            {{ \Illuminate\Support\Str::limit(strip_tags($utama->deskripsi), 120) }}
-          </p>
-        </div>
-        <div class="mt-4">
-          <a href="{{ route('landing.komunitas.show', $utama->id) }}"
-             class="inline-block bg-blue-600 text-white hover:bg-blue-800 text-yellow-800 font-semibold px-4 py-2 rounded hover:bg-yellow-300 transition">
-            Selengkapnya →
-          </a>
-        </div>
       </div>
-    @endif
-
-  </div>
-</div>
-
-
-
-
-    <br>
+    </div><br>
 
     <div class="w-[85%] mx-auto shadow-md rounded-2xl p-1 bg-white">
     <section class="py-10 px-4">
-      <h2 class="text-3xl font-bold text-center mb-4 uppercase">Struktur Organisasi Desa</h2>
-      <div class="border-t-4 border-yellow-400 w-20 mx-auto mb-8"></div>
-      <br><br>
-      <div class="flex flex-col items-center gap-6">
-
-        <!-- Kepala Desa -->
-        <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
-          <img src="{{ asset('images/profile.png') }}" alt="Kepala Desa" class="w-24 h-24 object-cover rounded-full border-2 border-gray-300">
-          <h3 class="mt-2 text-lg font-semibold text-green-700">Kepala Desa</h3>
-          <p class="text-sm text-gray-700">Nama Kepala Desa</p>
-        </div>
-
-        <!-- Sekretaris Desa -->
-        <div class="flex flex-wrap justify-center gap-6 mt-4">
-          <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
-            <img src="{{ asset('images/profile.png') }}" alt="Sekretaris Desa" class="w-20 h-20 object-cover rounded-full border border-gray-300">
-            <h3 class="mt-2 text-md font-semibold text-green-600">Sekretaris Desa</h3>
-            <p class="text-sm text-gray-700">Nama Sekretaris</p>
-          </div>
-        </div>
-
-        <!-- Kaur & Kasi -->
-        <div class="flex flex-wrap justify-center gap-6 mt-4">
-          <!-- KAUR -->
-          <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
-            <img src="{{ asset('images/profile.png') }}" alt="Kaur Keuangan" class="w-20 h-20 object-cover rounded-full">
-            <h3 class="mt-2 font-semibold text-green-600">Kaur Keuangan</h3>
-            <p class="text-sm text-gray-700">Nama Petugas</p>
-          </div>
-          <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
-            <img src="{{ asset('images/profile.png') }}" alt="Kaur Umum" class="w-20 h-20 object-cover rounded-full">
-            <h3 class="mt-2 font-semibold text-green-600">Kaur Umum & TU</h3>
-            <p class="text-sm text-gray-700">Nama Petugas</p>
-          </div>
-
-          <!-- KASI -->
-          <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
-            <img src="{{ asset('images/profile.png') }}" alt="Kasi Pemerintahan" class="w-20 h-20 object-cover rounded-full">
-            <h3 class="mt-2 font-semibold text-green-600">Kasi Pemerintahan</h3>
-            <p class="text-sm text-gray-700">Nama Petugas</p>
-          </div>
-          <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
-            <img src="{{ asset('images/profile.png') }}" alt="Kasi Pelayanan" class="w-20 h-20 object-cover rounded-full">
-            <h3 class="mt-2 font-semibold text-green-600">Kasi Pelayanan</h3>
-            <p class="text-sm text-gray-700">Nama Petugas</p>
-          </div>
-        </div>
-
-        <!-- Kepala Dusun -->
-        <div class="flex flex-wrap justify-center gap-6 mt-6">
-          <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
-            <img src="{{ asset('images/profile.png') }}" alt="Kepala Dusun 1" class="w-20 h-20 object-cover rounded-full">
-            <h3 class="mt-2 font-semibold text-green-600">Kepala Dusun 1</h3>
-            <p class="text-sm text-gray-700">Nama Petugas</p>
-          </div>
-          <div class="bg-white shadow-md p-4 rounded-md flex flex-col items-center w-60">
-            <img src="{{ asset('images/profile.png') }}" alt="Kepala Dusun 2" class="w-20 h-20 object-cover rounded-full">
-            <h3 class="mt-2 font-semibold text-green-600">Kepala Dusun 2</h3>
-            <p class="text-sm text-gray-700">Nama Petugas</p>
-          </div>
-        </div>
-      </div>
+      
     </section>
     </div>
     <br>

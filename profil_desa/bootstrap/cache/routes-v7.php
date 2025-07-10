@@ -13,7 +13,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::JavhTUYsesHnrE1z',
+            '_route' => 'generated::BsmL4sTkuFA5oowC',
           ),
           1 => NULL,
           2 => 
@@ -33,7 +33,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::nmNtina8OBJEPTaD',
+            '_route' => 'generated::lV7eGeBDHrmT0z2h',
           ),
           1 => NULL,
           2 => 
@@ -47,13 +47,53 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/komunitasview' => 
+      '/sejarah' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'komunitas.index',
+            '_route' => 'sejarah',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/visimisi' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'visimisi',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/berita' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'user.berita',
           ),
           1 => NULL,
           2 => 
@@ -142,7 +182,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::OtjFbRbmWzq4Qzao',
+            '_route' => 'generated::JBrJh9HvIdyaNK7N',
           ),
           1 => NULL,
           2 => 
@@ -178,7 +218,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::WafE2A6IM4kx8lPw',
+            '_route' => 'generated::dcufiJV1n19DOdqP',
           ),
           1 => NULL,
           2 => 
@@ -308,7 +348,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::IlS30grVUaik4OaC',
+            '_route' => 'generated::f2Wgtqa9cP6L6xBw',
           ),
           1 => NULL,
           2 => 
@@ -379,82 +419,6 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/user/komunitas' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'user.komunitas',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/komunitas' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'admin.komunitas.index',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'user.komunitas.store',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'POST' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      '/komunitas/create' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'user.komunitas.create',
-          ),
-          1 => NULL,
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
       '/admin/dashboard' => 
       array (
         0 => 
@@ -475,71 +439,15 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-    ),
-    2 => 
-    array (
-      0 => '{^(?|/komunitas(?|view/([^/]++)(*:33)|/([^/]++)(?|(*:52)|/(?|edit(*:67)|status(*:80))|(*:88)))|/reset\\-password/([^/]++)(*:122)|/verify\\-email/([^/]++)/([^/]++)(*:162)|/admin/komunitas/([^/]++)(*:195)|/storage/(.*)(*:216))/?$}sDu',
-    ),
-    3 => 
-    array (
-      33 => 
+      '/admin/berita' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'landing.komunitas.show',
+            '_route' => 'admin.berita',
           ),
-          1 => 
-          array (
-            0 => 'id',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      52 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'user.komunitas.show',
-          ),
-          1 => 
-          array (
-            0 => 'komunita',
-          ),
-          2 => 
-          array (
-            'GET' => 0,
-            'HEAD' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
-          6 => NULL,
-        ),
-      ),
-      67 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'user.komunitas.edit',
-          ),
-          1 => 
-          array (
-            0 => 'komunita',
-          ),
+          1 => NULL,
           2 => 
           array (
             'GET' => 0,
@@ -548,66 +456,126 @@ app('router')->setCompiledRoutes(
           3 => NULL,
           4 => false,
           5 => false,
-          6 => NULL,
-        ),
-      ),
-      80 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'admin.komunitas.updateStatus',
-          ),
-          1 => 
-          array (
-            0 => 'id',
-          ),
-          2 => 
-          array (
-            'PATCH' => 0,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => false,
-          6 => NULL,
-        ),
-      ),
-      88 => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            '_route' => 'user.komunitas.update',
-          ),
-          1 => 
-          array (
-            0 => 'komunita',
-          ),
-          2 => 
-          array (
-            'PUT' => 0,
-            'PATCH' => 1,
-          ),
-          3 => NULL,
-          4 => false,
-          5 => true,
           6 => NULL,
         ),
         1 => 
         array (
           0 => 
           array (
-            '_route' => 'user.komunitas.destroy',
+            '_route' => 'admin.berita.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/admin/berita/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.berita.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/sambutan/edit' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.datalandingpage',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/sambutan/update' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.sambutan.update',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/info/store-or-update' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.info.storeOrUpdate',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+    ),
+    2 => 
+    array (
+      0 => '{^(?|/berita/([^/]++)(*:23)|/reset\\-password/([^/]++)(*:55)|/verify\\-email/([^/]++)/([^/]++)(*:94)|/admin/berita/([^/]++)(?|(*:126)|/edit(*:139)|(*:147))|/info/([^/]++)(*:170)|/storage/(.*)(*:191))/?$}sDu',
+    ),
+    3 => 
+    array (
+      23 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'user.berita.show',
           ),
           1 => 
           array (
-            0 => 'komunita',
+            0 => 'id',
           ),
           2 => 
           array (
-            'DELETE' => 0,
+            'GET' => 0,
+            'HEAD' => 1,
           ),
           3 => NULL,
           4 => false,
@@ -615,7 +583,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      122 => 
+      55 => 
       array (
         0 => 
         array (
@@ -638,7 +606,7 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      162 => 
+      94 => 
       array (
         0 => 
         array (
@@ -662,17 +630,17 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      195 => 
+      126 => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'komunitas.show',
+            '_route' => 'admin.berita.show',
           ),
           1 => 
           array (
-            0 => 'id',
+            0 => 'berita',
           ),
           2 => 
           array (
@@ -685,7 +653,93 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      216 => 
+      139 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.berita.edit',
+          ),
+          1 => 
+          array (
+            0 => 'berita',
+          ),
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      147 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.berita.update',
+          ),
+          1 => 
+          array (
+            0 => 'berita',
+          ),
+          2 => 
+          array (
+            'PUT' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.berita.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'berita',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      170 => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.info.destroy',
+          ),
+          1 => 
+          array (
+            0 => 'id',
+          ),
+          2 => 
+          array (
+            'DELETE' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => true,
+          6 => NULL,
+        ),
+      ),
+      191 => 
       array (
         0 => 
         array (
@@ -723,7 +777,7 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
-    'generated::JavhTUYsesHnrE1z' => 
+    'generated::BsmL4sTkuFA5oowC' => 
     array (
       'methods' => 
       array (
@@ -752,7 +806,7 @@ app('router')->setCompiledRoutes(
                         \'exception\' => $exception,
                     ]), status: $exception ? 500 : 200);
                 }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000004c20000000000000000";}}',
-        'as' => 'generated::JavhTUYsesHnrE1z',
+        'as' => 'generated::BsmL4sTkuFA5oowC',
       ),
       'fallback' => false,
       'defaults' => 
@@ -768,7 +822,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::nmNtina8OBJEPTaD' => 
+    'generated::lV7eGeBDHrmT0z2h' => 
     array (
       'methods' => 
       array (
@@ -789,7 +843,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::nmNtina8OBJEPTaD',
+        'as' => 'generated::lV7eGeBDHrmT0z2h',
       ),
       'fallback' => false,
       'defaults' => 
@@ -805,28 +859,28 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'komunitas.index' => 
+    'sejarah' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'komunitasview',
+      'uri' => 'sejarah',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'uses' => 'App\\http\\Controllers\\LandingController@komunitasIndex',
-        'controller' => 'App\\http\\Controllers\\LandingController@komunitasIndex',
+        'uses' => 'App\\http\\Controllers\\LandingController@sejarah',
+        'controller' => 'App\\http\\Controllers\\LandingController@sejarah',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'komunitas.index',
+        'as' => 'sejarah',
       ),
       'fallback' => false,
       'defaults' => 
@@ -842,28 +896,102 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'landing.komunitas.show' => 
+    'visimisi' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'komunitasview/{id}',
+      'uri' => 'visimisi',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'uses' => 'App\\http\\Controllers\\LandingController@showkomunitas',
-        'controller' => 'App\\http\\Controllers\\LandingController@showkomunitas',
+        'uses' => 'App\\http\\Controllers\\LandingController@visimisi',
+        'controller' => 'App\\http\\Controllers\\LandingController@visimisi',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'landing.komunitas.show',
+        'as' => 'visimisi',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'user.berita' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'berita',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\http\\Controllers\\LandingController@berita',
+        'controller' => 'App\\http\\Controllers\\LandingController@berita',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'user.berita',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'user.berita.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'berita/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\http\\Controllers\\LandingController@showberita',
+        'controller' => 'App\\http\\Controllers\\LandingController@showberita',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'user.berita.show',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1029,7 +1157,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::OtjFbRbmWzq4Qzao' => 
+    'generated::JBrJh9HvIdyaNK7N' => 
     array (
       'methods' => 
       array (
@@ -1050,7 +1178,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::OtjFbRbmWzq4Qzao',
+        'as' => 'generated::JBrJh9HvIdyaNK7N',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1104,7 +1232,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::WafE2A6IM4kx8lPw' => 
+    'generated::dcufiJV1n19DOdqP' => 
     array (
       'methods' => 
       array (
@@ -1125,7 +1253,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::WafE2A6IM4kx8lPw',
+        'as' => 'generated::dcufiJV1n19DOdqP',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1445,7 +1573,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::IlS30grVUaik4OaC' => 
+    'generated::f2Wgtqa9cP6L6xBw' => 
     array (
       'methods' => 
       array (
@@ -1466,7 +1594,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::IlS30grVUaik4OaC',
+        'as' => 'generated::f2Wgtqa9cP6L6xBw',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1595,316 +1723,6 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'user.komunitas' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'user/komunitas',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth',
-          2 => 'userMiddleware',
-        ),
-        'uses' => 'App\\Http\\Controllers\\user\\KomunitasController@index',
-        'controller' => 'App\\Http\\Controllers\\user\\KomunitasController@index',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'user.komunitas',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'admin.komunitas.index' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'komunitas',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth',
-          2 => 'adminMiddleware',
-        ),
-        'uses' => 'App\\Http\\Controllers\\admin\\KomunitasApprovalController@index',
-        'controller' => 'App\\Http\\Controllers\\admin\\KomunitasApprovalController@index',
-        'namespace' => NULL,
-        'prefix' => '',
-        'where' => 
-        array (
-        ),
-        'as' => 'admin.komunitas.index',
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'user.komunitas.create' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'komunitas/create',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth',
-          2 => 'userMiddleware',
-        ),
-        'as' => 'user.komunitas.create',
-        'uses' => 'App\\Http\\Controllers\\user\\KomunitasController@create',
-        'controller' => 'App\\Http\\Controllers\\user\\KomunitasController@create',
-        'namespace' => NULL,
-        'prefix' => '/',
-        'where' => 
-        array (
-        ),
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'user.komunitas.store' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'POST',
-      ),
-      'uri' => 'komunitas',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth',
-          2 => 'userMiddleware',
-        ),
-        'as' => 'user.komunitas.store',
-        'uses' => 'App\\Http\\Controllers\\user\\KomunitasController@store',
-        'controller' => 'App\\Http\\Controllers\\user\\KomunitasController@store',
-        'namespace' => NULL,
-        'prefix' => '/',
-        'where' => 
-        array (
-        ),
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'user.komunitas.show' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'komunitas/{komunita}',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth',
-          2 => 'userMiddleware',
-        ),
-        'as' => 'user.komunitas.show',
-        'uses' => 'App\\Http\\Controllers\\user\\KomunitasController@show',
-        'controller' => 'App\\Http\\Controllers\\user\\KomunitasController@show',
-        'namespace' => NULL,
-        'prefix' => '/',
-        'where' => 
-        array (
-        ),
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'user.komunitas.edit' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'GET',
-        1 => 'HEAD',
-      ),
-      'uri' => 'komunitas/{komunita}/edit',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth',
-          2 => 'userMiddleware',
-        ),
-        'as' => 'user.komunitas.edit',
-        'uses' => 'App\\Http\\Controllers\\user\\KomunitasController@edit',
-        'controller' => 'App\\Http\\Controllers\\user\\KomunitasController@edit',
-        'namespace' => NULL,
-        'prefix' => '/',
-        'where' => 
-        array (
-        ),
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'user.komunitas.update' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'PUT',
-        1 => 'PATCH',
-      ),
-      'uri' => 'komunitas/{komunita}',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth',
-          2 => 'userMiddleware',
-        ),
-        'as' => 'user.komunitas.update',
-        'uses' => 'App\\Http\\Controllers\\user\\KomunitasController@update',
-        'controller' => 'App\\Http\\Controllers\\user\\KomunitasController@update',
-        'namespace' => NULL,
-        'prefix' => '/',
-        'where' => 
-        array (
-        ),
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
-    'user.komunitas.destroy' => 
-    array (
-      'methods' => 
-      array (
-        0 => 'DELETE',
-      ),
-      'uri' => 'komunitas/{komunita}',
-      'action' => 
-      array (
-        'middleware' => 
-        array (
-          0 => 'web',
-          1 => 'auth',
-          2 => 'userMiddleware',
-        ),
-        'as' => 'user.komunitas.destroy',
-        'uses' => 'App\\Http\\Controllers\\user\\KomunitasController@destroy',
-        'controller' => 'App\\Http\\Controllers\\user\\KomunitasController@destroy',
-        'namespace' => NULL,
-        'prefix' => '/',
-        'where' => 
-        array (
-        ),
-      ),
-      'fallback' => false,
-      'defaults' => 
-      array (
-      ),
-      'wheres' => 
-      array (
-      ),
-      'bindingFields' => 
-      array (
-      ),
-      'lockSeconds' => NULL,
-      'waitSeconds' => NULL,
-      'withTrashed' => false,
-    ),
     'admin.dashboard' => 
     array (
       'methods' => 
@@ -1944,14 +1762,14 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'komunitas.show' => 
+    'admin.berita' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'admin/komunitas/{id}',
+      'uri' => 'admin/berita',
       'action' => 
       array (
         'middleware' => 
@@ -1960,14 +1778,14 @@ app('router')->setCompiledRoutes(
           1 => 'auth',
           2 => 'adminMiddleware',
         ),
-        'uses' => 'App\\Http\\Controllers\\admin\\KomunitasApprovalController@show',
-        'controller' => 'App\\Http\\Controllers\\admin\\KomunitasApprovalController@show',
+        'uses' => 'App\\Http\\Controllers\\admin\\BeritaController@index',
+        'controller' => 'App\\Http\\Controllers\\admin\\BeritaController@index',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'komunitas.show',
+        'as' => 'admin.berita',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1983,13 +1801,14 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'admin.komunitas.updateStatus' => 
+    'admin.berita.create' => 
     array (
       'methods' => 
       array (
-        0 => 'PATCH',
+        0 => 'GET',
+        1 => 'HEAD',
       ),
-      'uri' => 'komunitas/{id}/status',
+      'uri' => 'admin/berita/create',
       'action' => 
       array (
         'middleware' => 
@@ -1998,14 +1817,359 @@ app('router')->setCompiledRoutes(
           1 => 'auth',
           2 => 'adminMiddleware',
         ),
-        'uses' => 'App\\Http\\Controllers\\admin\\KomunitasApprovalController@updateStatus',
-        'controller' => 'App\\Http\\Controllers\\admin\\KomunitasApprovalController@updateStatus',
+        'uses' => 'App\\Http\\Controllers\\admin\\BeritaController@create',
+        'controller' => 'App\\Http\\Controllers\\admin\\BeritaController@create',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'admin.komunitas.updateStatus',
+        'as' => 'admin.berita.create',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.berita.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'admin/berita',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'adminMiddleware',
+        ),
+        'uses' => 'App\\Http\\Controllers\\admin\\BeritaController@store',
+        'controller' => 'App\\Http\\Controllers\\admin\\BeritaController@store',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.berita.store',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.berita.show' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/berita/{berita}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'adminMiddleware',
+        ),
+        'uses' => 'App\\Http\\Controllers\\admin\\BeritaController@show',
+        'controller' => 'App\\Http\\Controllers\\admin\\BeritaController@show',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.berita.show',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.berita.edit' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/berita/{berita}/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'adminMiddleware',
+        ),
+        'uses' => 'App\\Http\\Controllers\\admin\\BeritaController@edit',
+        'controller' => 'App\\Http\\Controllers\\admin\\BeritaController@edit',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.berita.edit',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.berita.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'PUT',
+      ),
+      'uri' => 'admin/berita/{berita}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'adminMiddleware',
+        ),
+        'uses' => 'App\\Http\\Controllers\\admin\\BeritaController@update',
+        'controller' => 'App\\Http\\Controllers\\admin\\BeritaController@update',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.berita.update',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.berita.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'admin/berita/{berita}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'adminMiddleware',
+        ),
+        'uses' => 'App\\Http\\Controllers\\admin\\BeritaController@destroy',
+        'controller' => 'App\\Http\\Controllers\\admin\\BeritaController@destroy',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.berita.destroy',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.datalandingpage' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'sambutan/edit',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'adminMiddleware',
+        ),
+        'uses' => 'App\\Http\\Controllers\\admin\\DataLandingController@index',
+        'controller' => 'App\\Http\\Controllers\\admin\\DataLandingController@index',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.datalandingpage',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.sambutan.update' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'sambutan/update',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'adminMiddleware',
+        ),
+        'uses' => 'App\\Http\\Controllers\\admin\\DataLandingController@update',
+        'controller' => 'App\\Http\\Controllers\\admin\\DataLandingController@update',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.sambutan.update',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.info.storeOrUpdate' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'info/store-or-update',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'adminMiddleware',
+        ),
+        'uses' => 'App\\Http\\Controllers\\admin\\DataLandingController@storeOrUpdateinfo',
+        'controller' => 'App\\Http\\Controllers\\admin\\DataLandingController@storeOrUpdateinfo',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.info.storeOrUpdate',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.info.destroy' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'DELETE',
+      ),
+      'uri' => 'info/{id}',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'auth',
+          2 => 'adminMiddleware',
+        ),
+        'uses' => 'App\\Http\\Controllers\\admin\\DataLandingController@destroyinfo',
+        'controller' => 'App\\Http\\Controllers\\admin\\DataLandingController@destroyinfo',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.info.destroy',
       ),
       'fallback' => false,
       'defaults' => 

@@ -1,16 +1,23 @@
 <?php
 
-namespace App\Models\User;
+namespace App\Models\Admin;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Komunitas extends Model
+class Berita extends Model
 {
     use HasFactory;
 
+    protected $table = 'berita';
+
     protected $fillable = [
-        'user_id', 'judul', 'deskripsi', 'cover', 'gambar', 'status', 'dibaca'
+        'user_id',
+        'judul',
+        'deskripsi',
+        'cover',
+        'gambar',
+        'dibaca'
     ];
 
     protected $casts = [
