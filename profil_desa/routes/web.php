@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-use App\http\Controllers\LandingController;
+use App\Http\Controllers\LandingController;
 
 // User Controllers
 use App\Http\Controllers\user\UserController;
@@ -18,6 +18,8 @@ Route::get('/sejarah', [LandingController::class, 'sejarah'])->name('sejarah');
 Route::get('/visimisi', [LandingController::class, 'visimisi'])->name('visimisi');
 Route::get('/berita', [LandingController::class, 'berita'])->name('user.berita');
 Route::get('/berita/{id}', [LandingController::class, 'showberita'])->name('user.berita.show');
+Route::get('/produkunggulan', [LandingController::class, 'produkunggulan'])->name('produkunggulan');
+Route::get('/katalog', [LandingController::class, 'katalog'])->name('katalog');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

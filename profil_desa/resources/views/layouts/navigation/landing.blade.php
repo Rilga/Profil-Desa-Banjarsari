@@ -36,6 +36,21 @@
 
   <a href="{{ route('user.berita') }}" class="nav-link {{ Request::is('komunitas*') ? 'active' : '' }}">Berita</a>
 
+  <!-- Dropdown Belanja -->
+  <div class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
+    <button class="nav-link flex items-center gap-1">
+      Belanja
+      <svg class="w-4 h-4 mt-[2px]" fill="currentColor" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.043l3.71-3.81a.75.75 0 111.08 1.04l-4.24 4.36a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+      </svg>
+    </button>
+
+    <div x-show="open" x-transition
+         class="absolute mt-2 bg-white shadow-lg rounded-md w-40 border border-gray-200 z-50">
+      <a href="{{ route('produkunggulan') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Produk Unggulan</a>
+      <a href="{{ route('katalog') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Katalog</a>
+    </div>
+  </div>
 </div>
 
 

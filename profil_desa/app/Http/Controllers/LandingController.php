@@ -65,4 +65,14 @@ class LandingController extends Controller
     {
         return view('sejarah');
     }
+
+        public function produkunggulan()
+    {
+        return view('produkunggulan');
+    }
+
+        public function katalog()
+    {
+        return view('katalog');
+    }
 }
