@@ -40,9 +40,39 @@ class LandingController extends Controller
         return view('welcome', compact('kontens', 'slides', 'sambutan', 'infos'));
     }
 
-    public function visimisi()
+    public function kondisiumum()
     {
-        return view('visimisi');
+        return view('kondisiumum');
+    }
+
+    public function kondisisosial()
+    {
+        return view('kondisisosial');
+    }
+
+    public function keadaanekonomi()
+    {
+        return view('keadaanekonomi');
+    }
+
+    public function kelembagaandesa()
+    {
+        return view('kelembagaandesa');
+    }
+
+    public function isustrategis()
+    {
+        return view('isustrategis');
+    }
+
+    public function program()
+    {
+        return view('program');
+    }
+
+    public function produk()
+    {
+        return view('produk');
     }
 
     public function berita()

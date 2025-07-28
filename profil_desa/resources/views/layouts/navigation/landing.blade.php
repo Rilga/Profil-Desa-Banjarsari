@@ -2,6 +2,7 @@
      @scroll.window="scrolled = window.scrollY > 10"
      :class="{ 'navbar-scrolled': scrolled }"
      class="navbar">
+     
   <div class="navbar-container">
     
     <!-- Logo -->
@@ -30,9 +31,17 @@
     <div x-show="open" x-transition
          class="absolute mt-2 bg-white shadow-lg rounded-md w-40 border border-gray-200 z-50">
       <a href="{{ route('sejarah') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sejarah</a>
-      <a href="{{ route('visimisi') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Visi & Misi</a>
+      <a href="{{ route('kondisiumum') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Kondisi Umum</a>
+      <a href="{{ route('kondisisosial') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Kondisi Sosial</a>
+      <a href="{{ route('keadaanekonomi') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Keadaan Ekonomi</a>
+      <a href="{{ route('kelembagaandesa') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Kelembagaan Desa</a>
+      <a href="{{ route('isustrategis') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Isu Strategis</a>
     </div>
   </div>
+
+  <a href="{{ route('user.program') }}" class="nav-link {{ Request::is('komunitas*') ? 'active' : '' }}">Program</a>
+
+  <a href="{{ route('user.produk') }}" class="nav-link {{ Request::is('komunitas*') ? 'active' : '' }}">Produk</a>
 
   <a href="{{ route('user.berita') }}" class="nav-link {{ Request::is('komunitas*') ? 'active' : '' }}">Berita</a>
 

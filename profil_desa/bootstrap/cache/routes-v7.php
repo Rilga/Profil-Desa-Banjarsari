@@ -13,7 +13,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::BsmL4sTkuFA5oowC',
+            '_route' => 'generated::aStRY8zy6TDVc7ta',
           ),
           1 => NULL,
           2 => 
@@ -33,7 +33,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::lV7eGeBDHrmT0z2h',
+            '_route' => 'generated::bhZMlR8gpFCWXDjk',
           ),
           1 => NULL,
           2 => 
@@ -67,13 +67,133 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
-      '/visimisi' => 
+      '/kondisi-umum' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'visimisi',
+            '_route' => 'kondisiumum',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/kondisi-sosial' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kondisisosial',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/keadaan-ekonomi' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'keadaanekonomi',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/kelembagaan-desa' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'kelembagaandesa',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/isu-strategis' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'isustrategis',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/program' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'user.program',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/produk' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'user.produk',
           ),
           1 => NULL,
           2 => 
@@ -182,7 +302,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::JBrJh9HvIdyaNK7N',
+            '_route' => 'generated::Jb5DIo5NKnc1iNzg',
           ),
           1 => NULL,
           2 => 
@@ -218,7 +338,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::dcufiJV1n19DOdqP',
+            '_route' => 'generated::SyhppkNWCe9EOjgz',
           ),
           1 => NULL,
           2 => 
@@ -348,7 +468,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::f2Wgtqa9cP6L6xBw',
+            '_route' => 'generated::FRBZrzdvSsY1iab0',
           ),
           1 => NULL,
           2 => 
@@ -777,7 +897,7 @@ app('router')->setCompiledRoutes(
   ),
   'attributes' => 
   array (
-    'generated::BsmL4sTkuFA5oowC' => 
+    'generated::aStRY8zy6TDVc7ta' => 
     array (
       'methods' => 
       array (
@@ -806,7 +926,7 @@ app('router')->setCompiledRoutes(
                         \'exception\' => $exception,
                     ]), status: $exception ? 500 : 200);
                 }";s:5:"scope";s:54:"Illuminate\\Foundation\\Configuration\\ApplicationBuilder";s:4:"this";N;s:4:"self";s:32:"00000000000004c20000000000000000";}}',
-        'as' => 'generated::BsmL4sTkuFA5oowC',
+        'as' => 'generated::aStRY8zy6TDVc7ta',
       ),
       'fallback' => false,
       'defaults' => 
@@ -822,7 +942,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::lV7eGeBDHrmT0z2h' => 
+    'generated::bhZMlR8gpFCWXDjk' => 
     array (
       'methods' => 
       array (
@@ -843,7 +963,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::lV7eGeBDHrmT0z2h',
+        'as' => 'generated::bhZMlR8gpFCWXDjk',
       ),
       'fallback' => false,
       'defaults' => 
@@ -896,28 +1016,250 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'visimisi' => 
+    'kondisiumum' => 
     array (
       'methods' => 
       array (
         0 => 'GET',
         1 => 'HEAD',
       ),
-      'uri' => 'visimisi',
+      'uri' => 'kondisi-umum',
       'action' => 
       array (
         'middleware' => 
         array (
           0 => 'web',
         ),
-        'uses' => 'App\\http\\Controllers\\LandingController@visimisi',
-        'controller' => 'App\\http\\Controllers\\LandingController@visimisi',
+        'uses' => 'App\\http\\Controllers\\LandingController@kondisiumum',
+        'controller' => 'App\\http\\Controllers\\LandingController@kondisiumum',
         'namespace' => NULL,
         'prefix' => '',
         'where' => 
         array (
         ),
-        'as' => 'visimisi',
+        'as' => 'kondisiumum',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kondisisosial' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'kondisi-sosial',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\http\\Controllers\\LandingController@kondisisosial',
+        'controller' => 'App\\http\\Controllers\\LandingController@kondisisosial',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'kondisisosial',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'keadaanekonomi' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'keadaan-ekonomi',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\http\\Controllers\\LandingController@keadaanekonomi',
+        'controller' => 'App\\http\\Controllers\\LandingController@keadaanekonomi',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'keadaanekonomi',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'kelembagaandesa' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'kelembagaan-desa',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\http\\Controllers\\LandingController@kelembagaandesa',
+        'controller' => 'App\\http\\Controllers\\LandingController@kelembagaandesa',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'kelembagaandesa',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'isustrategis' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'isu-strategis',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\http\\Controllers\\LandingController@isustrategis',
+        'controller' => 'App\\http\\Controllers\\LandingController@isustrategis',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'isustrategis',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'user.program' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'program',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\http\\Controllers\\LandingController@program',
+        'controller' => 'App\\http\\Controllers\\LandingController@program',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'user.program',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'user.produk' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'produk',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+        ),
+        'uses' => 'App\\http\\Controllers\\LandingController@produk',
+        'controller' => 'App\\http\\Controllers\\LandingController@produk',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'user.produk',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1157,7 +1499,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::JBrJh9HvIdyaNK7N' => 
+    'generated::Jb5DIo5NKnc1iNzg' => 
     array (
       'methods' => 
       array (
@@ -1178,7 +1520,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::JBrJh9HvIdyaNK7N',
+        'as' => 'generated::Jb5DIo5NKnc1iNzg',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1232,7 +1574,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::dcufiJV1n19DOdqP' => 
+    'generated::SyhppkNWCe9EOjgz' => 
     array (
       'methods' => 
       array (
@@ -1253,7 +1595,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::dcufiJV1n19DOdqP',
+        'as' => 'generated::SyhppkNWCe9EOjgz',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1573,7 +1915,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::f2Wgtqa9cP6L6xBw' => 
+    'generated::FRBZrzdvSsY1iab0' => 
     array (
       'methods' => 
       array (
@@ -1594,7 +1936,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::f2Wgtqa9cP6L6xBw',
+        'as' => 'generated::FRBZrzdvSsY1iab0',
       ),
       'fallback' => false,
       'defaults' => 

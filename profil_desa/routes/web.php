@@ -15,7 +15,13 @@ use App\Http\Controllers\admin\DataLandingController;
 
 Route::get('/', [LandingController::class, 'landing']);
 Route::get('/sejarah', [LandingController::class, 'sejarah'])->name('sejarah');
-Route::get('/visimisi', [LandingController::class, 'visimisi'])->name('visimisi');
+Route::get('/kondisi-umum', [LandingController::class, 'kondisiumum'])->name('kondisiumum');
+Route::get('/kondisi-sosial', [LandingController::class, 'kondisisosial'])->name('kondisisosial');
+Route::get('/keadaan-ekonomi', [LandingController::class, 'keadaanekonomi'])->name('keadaanekonomi');
+Route::get('/kelembagaan-desa', [LandingController::class, 'kelembagaandesa'])->name('kelembagaandesa');
+Route::get('/isu-strategis', [LandingController::class, 'isustrategis'])->name('isustrategis');
+Route::get('/program', [LandingController::class, 'program'])->name('user.program');
+Route::get('/produk', [LandingController::class, 'produk'])->name('user.produk');
 Route::get('/berita', [LandingController::class, 'berita'])->name('user.berita');
 Route::get('/berita/{id}', [LandingController::class, 'showberita'])->name('user.berita.show');
 
