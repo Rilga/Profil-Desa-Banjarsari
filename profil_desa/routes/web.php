@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 use App\Http\Controllers\LandingController;
 
@@ -19,7 +20,9 @@ Route::get('/visimisi', [LandingController::class, 'visimisi'])->name('visimisi'
 Route::get('/berita', [LandingController::class, 'berita'])->name('user.berita');
 Route::get('/berita/{id}', [LandingController::class, 'showberita'])->name('user.berita.show');
 Route::get('/produkunggulan', [LandingController::class, 'produkunggulan'])->name('produkunggulan');
-Route::get('/katalog', [LandingController::class, 'katalog'])->name('katalog');
+Route::get('/katalog', [ProductController::class, 'index'])->name('katalog.index');
+Route::get('/katalog/{slug}', [ProductController::class, 'show'])->name('katalog.show');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -36,6 +39,7 @@ Route::middleware(['auth', 'userMiddleware'])->group(function () {
 
 Route::middleware(['auth', 'adminMiddleware'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
+    Route::resource('/admin/products', \App\Http\Controllers\admin\ProductController::class)->names('admin.products');
 
 
     // Rute CRUD Berita

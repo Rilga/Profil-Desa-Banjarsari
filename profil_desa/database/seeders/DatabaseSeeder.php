@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash; 
 
 class DatabaseSeeder extends Seeder
 {
@@ -20,6 +21,10 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@banjarsari.com',
             'password' => bcrypt('admin12345'), // Use bcrypt for password hashing
             'role' => 'admin',
+        ]);
+
+        $this->call([
+            ProductSeeder::class,
         ]);
     }
 }

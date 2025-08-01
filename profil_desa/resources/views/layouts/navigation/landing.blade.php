@@ -48,7 +48,7 @@
     <div x-show="open" x-transition
          class="absolute mt-2 bg-white shadow-lg rounded-md w-40 border border-gray-200 z-50">
       <a href="{{ route('produkunggulan') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Produk Unggulan</a>
-      <a href="{{ route('katalog') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Katalog</a>
+      <a href="{{ route('katalog.index') }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Katalog</a>
     </div>
   </div>
 </div>
