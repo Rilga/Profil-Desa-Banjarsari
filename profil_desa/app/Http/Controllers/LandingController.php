@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Admin\Berita;
 use App\Models\Admin\Info;
 use App\Models\Admin\Sambutan;
+use App\Models\Produk;
 
 class LandingController extends Controller
 {
