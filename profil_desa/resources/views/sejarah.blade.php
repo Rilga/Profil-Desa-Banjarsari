@@ -2,14 +2,20 @@
 
 @section('content')
 
-<!-- SVG Background Decoration -->
-<div class="absolute w-full overflow-hidden z-10">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
-        <path fill="#ffffff" fill-opacity="1"
-              d="M0,32L80,42.7C160,53,320,75,480,80C640,85,800,75,960,69.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
-        </path>
-    </svg>
-</div>
+      <div class="absolute top-0 left-0 w-screen h-[520px] z-10 overflow-hidden pointer-events-none">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          class="w-full h-full"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="#ffffff"
+            fill-opacity="1"
+            d="M0,32L80,42.7C160,53,320,75,480,80C640,85,800,75,960,69.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+          ></path>
+        </svg>
+      </div>
 
 <!-- Hero Section -->
 <section class="relative w-full py-20 bg-green-600 z-0 shadow-inner">

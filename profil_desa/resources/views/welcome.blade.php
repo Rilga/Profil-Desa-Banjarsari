@@ -357,11 +357,21 @@
         <div class="absolute inset-0 bg-black/40 z-10"></div>
 
         {{-- Svg --}}
-        <div class="absolute inset-x-0 w-full overflow-hidden z-10 ">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="w-full h-auto" preserveAspectRatio="none">
-            <path fill="#ffffff" fill-opacity="1" d="M0,32L80,42.7C160,53,320,75,480,80C640,85,800,75,960,69.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-          </svg>
-        </div>
+      <div class="absolute top-0 left-0 w-screen h-[520px] z-10 overflow-hidden pointer-events-none">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+          class="w-full h-full"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="#ffffff"
+            fill-opacity="1"
+            d="M0,32L80,42.7C160,53,320,75,480,80C640,85,800,75,960,69.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+          ></path>
+        </svg>
+      </div>
+
 
         <!-- Konten Teks -->
         <div class="relative z-20 h-full flex items-center">
@@ -371,7 +381,7 @@
                         <!-- Kolom kiri -->
                         <div class="flex flex-col items-start space-y-2">
                             <h1 id="typing-text" class="header-text whitespace-pre-line text-white m-0 p-0"></h1>
-                            <h3 class="text-white text-lg m-0 p-0">Kec. Telkom Kab. Bandung</h3>
+                            <h3 class="text-white text-lg m-0 p-0">Kec. Bayongbong Kab. Garut</h3>
                         </div>
 
                         <!-- Kolom kanan -->
@@ -388,17 +398,17 @@
     <section class="absolute z-30 left-1/2 transform -translate-x-1/2 -bottom-12 w-full max-w-5xl px-4">
         <div class="stats-container">
             <div class="stat-box">
-            <h2>1.257</h2>
+            <h2>7.682</h2>
             <p>Jumlah Penduduk (Jiwa)</p>
             </div>
             <div class="divider"></div>
             <div class="stat-box">
-            <h2>322</h2>
+            <h2>2.293</h2>
             <p>Jumlah Kepala Keluarga (KK)</p>
             </div>
             <div class="divider"></div>
             <div class="stat-box">
-            <h2>15.4 km²</h2>
+            <h2>140 Ha/m²</h2>
             <p>Luas Wilayah</p>
             </div>
         </div>
@@ -441,7 +451,7 @@
     
     {{-- sekilas info --}}
 @if($infos->count())
-    <div class="w-[85%] mx-auto rounded-md border border-yellow-300 overflow-hidden shadow-md mb-6">
+    <div class="w-[85%] mx-auto rounded-md border border-yellow-300 overflow-hidden shadow-md">
         <div class="flex">
             
             <!-- Label Sekilas Info -->

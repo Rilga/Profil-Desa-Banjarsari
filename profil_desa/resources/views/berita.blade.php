@@ -15,11 +15,20 @@
 </style>
 
 <!-- Hero Section -->
-    <div class="absolute w-full overflow-hidden z-10 ">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#ffffff" fill-opacity="1" d="M0,32L80,42.7C160,53,320,75,480,80C640,85,800,75,960,69.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-        </svg>
-    </div>
+<div class="absolute top-0 left-0 w-screen h-[520px] z-10 overflow-hidden pointer-events-none">
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        class="w-full h-full"
+        preserveAspectRatio="none"
+    >
+    <path
+        fill="#ffffff"
+        fill-opacity="1"
+        d="M0,32L80,42.7C160,53,320,75,480,80C640,85,800,75,960,69.3C1120,64,1280,64,1360,64L1440,64L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+    ></path>
+    </svg>
+</div>
         <br>
 <section class="relative w-full py-20 overflow-hidden">
     <div class="absolute inset-0">
@@ -30,7 +39,7 @@
 
     <div class="relative z-10 max-w-4xl mx-auto text-center px-6 mt-5">
         <h1 class="text-4xl sm:text-5xl font-extrabold text-green-800 mb-4 leading-tight drop-shadow-md">
-            Komunitas <span class="text-yellow-500">Desa Banjarsari</span>
+            Berita <span class="text-yellow-500">Desa Banjarsari</span>
         </h1>
         <p class="text-white text-lg sm:text-xl max-w-2xl mx-auto drop-shadow-sm">
             Bersama kita kuat, bersatu kita hebat. Lihat kegiatan komunitas yang menginspirasi dan berdampak.
@@ -41,15 +50,15 @@
 <!-- Search Bar -->
 <div class="max-w-3xl mx-auto -mt-10 mb-12 px-4 z-10 relative">
     <form method="GET" action="">
-        <input type="text" name="q" value="{{ request('q') }}" placeholder="Cari komunitas atau kegiatan..."
+        <input type="text" name="q" value="{{ request('q') }}" placeholder="Cari berita atau kegiatan..."
                class="w-full border border-green-300 bg-white rounded-full px-6 py-3 shadow-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition">
     </form>
 </div>
 
 
-<!-- Komunitas Card Section -->
+<!-- Berita Card Section -->
 <div class="w-[85%] mx-auto bg-white shadow-2xl rounded-2xl py-10 px-4 sm:px-6 lg:px-8">
-    <h2 class="text-2xl font-extrabold text-gray-800 mb-2 text-center">Kegiatan Komunitas</h2>
+    <h2 class="text-2xl font-extrabold text-gray-800 mb-2 text-center">Berita Desa Banjarsari</h2>
     <div class="border-t-4 border-yellow-400 w-20 mx-auto mb-10"></div>
 
     @if($kontens->count())

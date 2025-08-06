@@ -10,34 +10,49 @@ use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
-    // Menampilkan daftar produk di halaman admin
-    public function index()
+    // ... (metode index, create, store yang sudah ada) ...
+
+    /**
+     * Menampilkan form untuk mengedit produk.
+     *
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Product $product)
     {
-        $products = Product::latest()->paginate(10);
-        return view('admin.products.index', compact('products'));
+        return view('admin.products.edit', compact('product'));
     }
 
-    // Menampilkan form untuk membuat produk baru
-    public function create()
-    {
-        return view('admin.products.create');
-    }
-
-    // Menyimpan produk baru ke database
-    public function store(Request $request)
+    /**
+     * Memperbarui produk di database.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Product $product)
     {
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
             'price' => 'required|numeric',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Validasi gambar
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Gambar tidak wajib diisi saat update
         ]);
 
-        // Upload gambar
-        $imagePath = $request->file('image')->store('products', 'public');
+        $imagePath = $product->image; // Simpan path gambar lama sebagai default
 
-        // Buat produk baru
-        Product::create([
+        // Jika ada file gambar baru yang di-upload
+        if ($request->hasFile('image')) {
+            // Hapus gambar lama jika ada
+            if ($product->image) {
+                Storage::disk('public')->delete($product->image);
+            }
+            // Simpan gambar baru
+            $imagePath = $request->file('image')->store('products', 'public');
+        }
+
+        // Update data produk
+        $product->update([
             'name' => $request->name,
             'slug' => Str::slug($request->name, '-'),
             'description' => $request->description,
@@ -45,8 +60,25 @@ class ProductController extends Controller
             'image' => $imagePath,
         ]);
 
-        return redirect()->route('admin.products.index')->with('success', 'Produk berhasil ditambahkan.');
+        return redirect()->route('admin.products.index')->with('success', 'Produk berhasil diperbarui.');
     }
 
-    // (Metode lain seperti edit, update, destroy bisa ditambahkan di sini nanti)
+    /**
+     * Menghapus produk dari database.
+     *
+     * @param  \App\Models\Product  $product
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Product $product)
+    {
+        // Hapus gambar dari storage
+        if ($product->image) {
+            Storage::disk('public')->delete($product->image);
+        }
+
+        // Hapus data produk dari database
+        $product->delete();
+
+        return redirect()->route('admin.products.index')->with('success', 'Produk berhasil dihapus.');
+    }
 }

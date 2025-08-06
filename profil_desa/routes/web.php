@@ -2,27 +2,34 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProductController as PublicProductController; 
 
 use App\Http\Controllers\LandingController;
 
 // User Controllers
 use App\Http\Controllers\user\UserController;
+use App\Http\Controllers\user\ProductController as UserProductController;
+use App\Http\Middleware\UserMiddleware;
 
 // Admin Controllers
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\BeritaController;
 use App\Http\Controllers\admin\DataLandingController;
+use App\Http\Middleware\AdminMiddleware;
 
 Route::get('/', [LandingController::class, 'landing']);
 Route::get('/sejarah', [LandingController::class, 'sejarah'])->name('sejarah');
-Route::get('/visimisi', [LandingController::class, 'visimisi'])->name('visimisi');
+Route::get('/kondisi-umum', [LandingController::class, 'kondisiumum'])->name('kondisiumum');
+Route::get('/kondisi-sosial', [LandingController::class, 'kondisisosial'])->name('kondisisosial');
+Route::get('/keadaan-ekonomi', [LandingController::class, 'keadaanekonomi'])->name('keadaanekonomi');
+Route::get('/kelembagaan-desa', [LandingController::class, 'kelembagaandesa'])->name('kelembagaandesa');
+Route::get('/isu-strategis', [LandingController::class, 'isustrategis'])->name('isustrategis');
+Route::get('/program', [LandingController::class, 'program'])->name('user.program');
+Route::get('/produkunggulan', [LandingController::class, 'produkunggulan'])->name('produkunggulan');
+Route::get('/katalog', [PublicProductController::class, 'index'])->name('katalog.index');
+Route::get('/katalog/{slug}', [PublicProductController::class, 'show'])->name('katalog.show');
 Route::get('/berita', [LandingController::class, 'berita'])->name('user.berita');
 Route::get('/berita/{id}', [LandingController::class, 'showberita'])->name('user.berita.show');
-Route::get('/produkunggulan', [LandingController::class, 'produkunggulan'])->name('produkunggulan');
-Route::get('/katalog', [ProductController::class, 'index'])->name('katalog.index');
-Route::get('/katalog/{slug}', [ProductController::class, 'show'])->name('katalog.show');
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -32,14 +39,14 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::middleware(['auth', 'userMiddleware'])->group(function () {
-    Route::get('/user/dashboard', [UserController::class, 'index'])->name('user.dashboard');
-
+Route::middleware(['auth', 'verified', UserMiddleware::class])->prefix('user')->name('user.')->group(function () {
+    Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');
+    Route::get('/produkunggulan', [UserController::class, 'produkunggulan'])->name('produkunggulan');
+    Route::resource('products', UserProductController::class)->names('products');
 });
 
 Route::middleware(['auth', 'adminMiddleware'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');
-    Route::resource('/admin/products', \App\Http\Controllers\admin\ProductController::class)->names('admin.products');
 
 
     // Rute CRUD Berita
@@ -50,8 +57,6 @@ Route::middleware(['auth', 'adminMiddleware'])->group(function () {
     Route::get('admin/berita/{berita}/edit', [BeritaController::class, 'edit'])->name('admin.berita.edit');
     Route::put('admin/berita/{berita}', [BeritaController::class, 'update'])->name('admin.berita.update');
     Route::delete('admin/berita/{berita}', [BeritaController::class, 'destroy'])->name('admin.berita.destroy');
-
-
 
     Route::get('sambutan/edit', [DataLandingController::class, 'index'])->name('admin.datalandingpage');
     Route::post('sambutan/update', [DataLandingController::class, 'update'])->name('admin.sambutan.update');

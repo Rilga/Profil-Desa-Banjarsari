@@ -1,37 +1,53 @@
 <?php
 
-// app/Http/Controllers/ProductController.php
-
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Tampilkan daftar produk dengan filter dan pencarian.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::paginate(10);
+        // Ambil semua kategori untuk dropdown
+        $categories = Category::all();
 
-        // Kiim data tersebut ke view 'katalog'
-        return view('katalog', ['products' => $products]);
+        // Query dasar produk
+        $query = Product::query();
 
-        return response()->json($products);
+        // Filter berdasarkan kategori (jika dipilih)
+        if ($request->filled('category')) {
+            $query->where('category_id', $request->category);
+        }
+
+        // Pencarian nama produk, seller, atau tag
+        if ($request->filled('search')) {
+            $search = $request->search;
+            $query->where(function ($q) use ($search) {
+                $q->where('name', 'like', "%$search%")
+                  ->orWhere('seller', 'like', "%$search%")
+                  ->orWhereJsonContains('tags', $search);
+            });
+        }
+
+        // Paginate hasilnya
+        $products = $query->paginate(10);
+
+        // Kirim ke view katalog
+        return view('katalog', compact('products', 'categories'));
     }
 
     /**
-     * Display the specified resource.
+     * Tampilkan detail produk berdasarkan slug.
      */
     public function show($slug)
     {
         $product = Product::where('slug', $slug)->firstOrFail();
 
-        // Kirim data produk tersebut ke view 'detail-produk'
         return view('detail-produk', ['product' => $product]);
-
-        return response()->json($product);
     }
 }

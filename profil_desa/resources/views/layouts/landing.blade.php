@@ -14,8 +14,6 @@
 
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
-    {{-- AOS CSS --}}
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     {{-- Fonts --}}
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -62,20 +60,8 @@
         }, 150); // waktu fade-out
       });
     });
-    
-    // Initialize AOS with settings for both scroll directions
-    AOS.init({
-      once: false,          // animations will occur every time the element comes into view
-      mirror: true,         // whether elements should animate out while scrolling past them in the opposite direction
-      duration: 800,        // values from 0 to 3000, with step 50ms
-      easing: 'ease-out',   // default easing for AOS animations
-      anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-    });
   });
 </script>
 
-{{-- AOS JS --}}
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
 </body>
-</html>
+</html>              

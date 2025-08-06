@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Admin\Berita;
 use App\Models\Admin\Info;
 use App\Models\Admin\Sambutan;
-use App\Models\Produk;
 
 class LandingController extends Controller
 {
@@ -41,9 +40,44 @@ class LandingController extends Controller
         return view('welcome', compact('kontens', 'slides', 'sambutan', 'infos'));
     }
 
-    public function visimisi()
+    public function kondisiumum()
     {
-        return view('visimisi');
+        return view('kondisiumum');
+    }
+
+    public function kondisisosial()
+    {
+        return view('kondisisosial');
+    }
+
+    public function keadaanekonomi()
+    {
+        return view('keadaanekonomi');
+    }
+
+    public function kelembagaandesa()
+    {
+        return view('kelembagaandesa');
+    }
+
+    public function isustrategis()
+    {
+        return view('isustrategis');
+    }
+
+    public function program()
+    {
+        return view('program');
+    }
+
+    public function produkunggulan()
+    {
+        return view('produkunggulan');
+    }
+
+        public function katalog()
+    {
+        return view('katalog');
     }
 
     public function berita()
@@ -65,15 +99,5 @@ class LandingController extends Controller
     public function sejarah()
     {
         return view('sejarah');
-    }
-
-        public function produkunggulan()
-    {
-        return view('produkunggulan');
-    }
-
-        public function katalog()
-    {
-        return view('katalog');
     }
 }

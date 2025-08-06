@@ -6,19 +6,27 @@
 <div class="max-w-6xl mx-auto px-4" style="padding-top: 120px;">
 <div class="max-w-6xl mx-auto px-4" style="padding-top: 10px;">
     {{-- Filter & Search --}}
-    <div class="flex flex-col md:flex-row gap-4 mb-12">
+    <form method="GET" action="{{ route('katalog.index') }}" class="flex flex-col md:flex-row gap-4 mb-12">
+        {{-- Dropdown Kategori --}}
         <div class="w-full md:w-1/4">
-            <select class="border border-gray-300 rounded-lg px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
-                <option>Semua Kategori</option>
+            <select name="category" class="border border-gray-300 rounded-lg px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                <option value="">Semua Kategori</option>
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}" {{ request('category') == $category->id ? 'selected' : '' }}>
+                        {{ $category->name }}
+                    </option>
+                @endforeach
             </select>
         </div>
+
+        {{-- Input Pencarian --}}
         <div class="flex w-full md:w-2/4">
-            <input type="text" class="border border-gray-300 rounded-l-lg px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="Cari Produk">
-            <button class="bg-green-600 hover:bg-green-700 text-white px-12 rounded-r-lg transition-colors duration-200 font-medium whitespace-nowrap">
+            <input type="text" name="search" value="{{ request('search') }}" class="border border-gray-300 rounded-l-lg px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="Cari Produk">
+            <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-12 rounded-r-lg transition-colors duration-200 font-medium whitespace-nowrap">
                 Cari
             </button>
         </div>
-    </div>
+    </form>
 
     {{-- Produk Grid - Menggunakan data dari Controller --}}
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
