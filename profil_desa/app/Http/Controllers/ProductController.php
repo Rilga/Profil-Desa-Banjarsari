@@ -46,8 +46,20 @@ class ProductController extends Controller
      */
     public function show($slug)
     {
-        $product = Product::where('slug', $slug)->firstOrFail();
+    // Langkah 1: Ambil produk utama yang sedang dilihat
+    $product = Product::with('category')->where('slug', $slug)->firstOrFail();
 
-        return view('detail-produk', ['product' => $product]);
+    // Langkah 2: Ambil produk lain dari kategori yang sama
+    $relatedProducts = collect(); // Buat koleksi kosong untuk jaga-jaga
+    if ($product->category) {
+        $relatedProducts = Product::where('category_id', $product->category_id)
+                                  ->where('id', '!=', $product->id) // Jangan tampilkan produk ini lagi
+                                  ->inRandomOrder()
+                                  ->limit(4) // Ambil maksimal 4
+                                  ->get();
+    }
+
+    // Langkah 3: Kirim kedua data ke view
+    return view('detail-produk', compact('product', 'relatedProducts'));
     }
 }
