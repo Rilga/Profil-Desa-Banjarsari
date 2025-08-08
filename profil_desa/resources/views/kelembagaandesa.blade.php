@@ -29,127 +29,224 @@
     </div>
 </section>
 
-<!-- Kondisi Umum Section -->
-<section class="py-16 bg-white relative z-10">
-    <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-2xl sm:text-3xl font-semibold text-gray-800 mb-6 border-l-4 border-green-500 pl-4">
-            Letak Geografis
-        </h2>
-        <div class="bg-gray-50 p-6 rounded-lg shadow-md text-gray-700 text-lg leading-relaxed space-y-6 text-justify">
-            <p>
-            Desa Banjarsari salah satu desa di Kecamatan Bayongbong di Kabupaten Garut yang terdiri dari 8 RW dan 36 RT. Kondisi Umum desa Banjarsari memiliki batas wilayah administratif, yaitu : 
-            </p>
-            <div class="space-y-2">
-                <div class="text-gray-800">
-                    <span class="inline-block w-40 font-medium">Sebelah Utara</span>: Desa Cintakarya
-                </div>
-                <div class="text-gray-800">
-                    <span class="inline-block w-40 font-medium">Sebelah Timur</span>: Desa Mekarjaya
-                </div>
-                <div class="text-gray-800">
-                    <span class="inline-block w-40 font-medium">Sebelah Selatan</span>: Desa Mekarsari
-                </div>
-                <div class="text-gray-800">
-                    <span class="inline-block w-40 font-medium">Sebelah Barat</span>: Desa Padamukti
-                </div>
-            </div>
-            <p>
-                Gambaran Desa BANJARSARI secara administratif dapat dilihat dalam peta dibawah ini.
-            </p>
-        </div><br>
+<section class="py-16 bg-gray-50 relative z-10">
+    <div class="max-w-5xl mx-auto px-4 space-y-12">
 
-        <!-- Tofografi -->
-        <div class="mt-12">
-            <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 border-l-4 border-green-500 pl-4">
-                Tofografi 
-            </h3>
-            <div class="bg-gray-50 p-6 rounded-lg shadow-md text-gray-700 text-lg leading-relaxed space-y-6 text-justify">
-                <p>
-                Desa BANJARSARI merupakan Desa yang berada di daerah datarn tinggi dengan ketinggian kira-kira 800-1000450-550m DPL (Diatas Permukaan Laut.) sebagian besar wilayah Desa BANJARSARI adalah daerah yang cocok untuk pertanian dan sebelah utara desa terbentang sungai Cibodas.
-                </p>
-            </div>
-        </div><br>
+        <!-- A. KONDISI PEMERINTAHAN DESA -->
+        <div>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-green-500 pl-4">A. Kondisi Pemerintahan Desa</h2>
+            <div class="space-y-8">
+                <!-- 1. Pembagian Wilayah Desa -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-3">1. Pembagian Wilayah Desa</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-gray-700 leading-relaxed">
+                        <p>Desa Banjarsari terdiri dari 3 (Tiga) dusun dan 36 RT, dengan sebaran sebagai berikut:</p>
+                        <ul class="list-disc list-inside pl-4 mt-2 space-y-1">
+                            <li><b>Dusun I:</b> Terletak di sebelah Selatan dan Barat</li>
+                            <li><b>Dusun II:</b> Terletak di sebelah Utara</li>
+                            <li><b>Dusun III:</b> Terletak di sebelah Timur</li>
+                        </ul>
+                    </div>
+                </div>
 
-        <!-- Hidrologi dan klimatologi -->
-        <div class="mt-12">
-            <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 border-l-4 border-green-500 pl-4">
-                Hidrologi dan klimatologi
-            </h3>
-            <div class="bg-gray-50 p-6 rounded-lg shadow-md text-gray-700 text-lg leading-relaxed space-y-6 text-justify">
-                <p>
-                Aspek hidrologi suatu wilayah desa sangat dibutuhkan dalam pengendalian dan pengaturan tata air wilayah desa. Berdasarkan hidrologinya, aliran-aliran sungai di wilayah desa Banjarsari membentuk pola daerah aliran sungai, yaitu DAS Cibodas. Tercatat berberapa sungai maupun selokan baik skala kecil, sedang dan besar terdapat di Desa Banjarsari, seperti : Sungai Cibodas dan Cigarukgak yang mengalir dari arah Barat ke Timur  sampai bermuara di sungai papandayan dan inilah yang menjadi sumber Hidrologi Desa Banjarsari.
-                </p>
-            </div>
-        </div><br>
+                <!-- 2. Struktur Organisasi Desa Banjarsari -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-3">2. Struktur Organisasi Desa Banjarsari</h3>
+                    <div class="bg-white rounded-lg shadow-md p-6 overflow-x-auto">
+                        <div class="flex flex-col items-center text-center min-w-max mx-auto">
+                            <!-- Kepala Desa -->
+                            <div class="relative">
+                                <div class="bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg font-bold text-lg">KEPALA DESA<br>BANJARSARI</div>
+                                <!-- Line down from Kades -->
+                                <div class="absolute top-full left-1/2 -translate-x-1/2 w-px h-8 bg-gray-400"></div>
+                            </div>
 
-        <!-- Hidrologi dan klimatologi -->
-        <div class="mt-12">
-            <h3 class="text-xl sm:text-2xl font-semibold text-gray-800 mb-4 border-l-4 border-green-500 pl-4">
-                Luas dan sebaran penggunaan lahan
-            </h3>
-              <div class="overflow-x-auto">
-                <table class="table-auto w-full border border-black text-sm text-gray-800">
-                <thead>
-                    <tr class="bg-green-600 text-white text-center">
-                    <th class="border border-black px-4 py-2">NO</th>
-                    <th class="border border-black px-4 py-2">JENIS LAHAN</th>
-                    <th class="border border-black px-4 py-2">LUAS</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <td class="border border-black px-4 py-1 text-center">1</td>
-                    <td class="border border-black px-4 py-1">Permukiman</td>
-                    <td class="border border-black px-4 py-1 text-right">75.0 <span class="text-sm text-gray-600">Ha/m²</span></td>
-                    </tr>
-                    <tr>
-                    <td class="border border-black px-4 py-1 text-center">2</td>
-                    <td class="border border-black px-4 py-1">Persawahan</td>
-                    <td class="border border-black px-4 py-1 text-right">142.8 <span class="text-sm text-gray-600">Ha/m²</span></td>
-                    </tr>
-                    <tr>
-                    <td class="border border-black px-4 py-1 text-center">3</td>
-                    <td class="border border-black px-4 py-1">Perkebunan</td>
-                    <td class="border border-black px-4 py-1 text-right">0.5 <span class="text-sm text-gray-600">Ha/m²</span></td>
-                    </tr>
-                    <tr>
-                    <td class="border border-black px-4 py-1 text-center">4</td>
-                    <td class="border border-black px-4 py-1">Kuburan</td>
-                    <td class="border border-black px-4 py-1 text-right">1 <span class="text-sm text-gray-600">Ha/m²</span></td>
-                    </tr>
-                    <tr>
-                    <td class="border border-black px-4 py-1 text-center">5</td>
-                    <td class="border border-black px-4 py-1">Pekarangan</td>
-                    <td class="border border-black px-4 py-1 text-right">-</td>
-                    </tr>
-                    <tr>
-                    <td class="border border-black px-4 py-1 text-center">6</td>
-                    <td class="border border-black px-4 py-1">Taman</td>
-                    <td class="border border-black px-4 py-1 text-right">-</td>
-                    </tr>
-                    <tr>
-                    <td class="border border-black px-4 py-1 text-center">7</td>
-                    <td class="border border-black px-4 py-1">Kolam</td>
-                    <td class="border border-black px-4 py-1 text-right">1,6 <span class="text-sm text-gray-600">Ha/m²</span></td>
-                    </tr>
-                    <tr>
-                    <td class="border border-black px-4 py-1 text-center">8</td>
-                    <td class="border border-black px-4 py-1">Fasilitas Umum</td>
-                    <td class="border border-black px-4 py-1 text-right">2.5 <span class="text-sm text-gray-600">Ha/m²</span></td>
-                    </tr>
-                    <tr>
-                    <td class="border border-black px-4 py-1 text-center">9</td>
-                    <td class="border border-black px-4 py-1">Lain-lain</td>
-                    <td class="border border-black px-4 py-1 text-right">1.4 <span class="text-sm text-gray-600">Ha/m²</span></td>
-                    </tr>
-                    <tr class="font-bold bg-gray-100">
-                    <td class="border border-black px-4 py-2 text-center" colspan="2">Jumlah Total</td>
-                    <td class="border border-black px-4 py-2 text-right">140,40 <span class="text-sm text-gray-800">Ha/m²</span></td>
-                    </tr>
-                </tbody>
-                </table>
+                            <!-- Horizontal Line Connector -->
+                            <div class="relative mt-8 w-[48rem]">
+                                <div class="absolute top-0 left-0 w-full h-px bg-gray-400"></div>
+                                <!-- Vertical line down to Kasi branch -->
+                                <div class="absolute top-0 left-1/4 w-px h-8 bg-gray-400"></div>
+                                <!-- Vertical line down to Sekdes branch -->
+                                <div class="absolute top-0 right-1/4 w-px h-8 bg-gray-400"></div>
+                            </div>
+
+                            <!-- Branches Container -->
+                            <div class="flex justify-between w-[48rem] mt-8">
+                                <!-- Left Branch: Kasi -->
+                                <div class="w-1/2 flex justify-center">
+                                    <div class="flex space-x-4">
+                                        <div class="flex flex-col items-center">
+                                            <div class="bg-orange-100 text-orange-800 px-3 py-2 rounded-md shadow-sm text-sm font-medium">Kasi Pemerintahan</div>
+                                        </div>
+                                        <div class="flex flex-col items-center">
+                                            <div class="bg-orange-100 text-orange-800 px-3 py-2 rounded-md shadow-sm text-sm font-medium">Kasi Kesra</div>
+                                        </div>
+                                        <div class="flex flex-col items-center">
+                                            <div class="bg-orange-100 text-orange-800 px-3 py-2 rounded-md shadow-sm text-sm font-medium">Kasi Pelayanan</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Right Branch: Sekretaris & Kaur -->
+                                <div class="w-1/2 flex justify-center">
+                                    <div class="flex flex-col items-center">
+                                        <div class="bg-blue-500 text-white px-5 py-2 rounded-lg shadow-md font-semibold">SEKRETARIS DESA</div>
+                                        <div class="relative mt-8">
+                                            <div class="absolute -top-8 left-1/2 w-px h-8 bg-gray-400"></div>
+                                            <div class="flex space-x-4">
+                                                <div class="bg-blue-100 text-blue-800 px-3 py-2 rounded-md shadow-sm text-sm font-medium">Kaur Perencanaan</div>
+                                                <div class="bg-blue-100 text-blue-800 px-3 py-2 rounded-md shadow-sm text-sm font-medium">Kaur Keuangan</div>
+                                                <div class="bg-blue-100 text-blue-800 px-3 py-2 rounded-md shadow-sm text-sm font-medium">Kaur TU</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Kepala Dusun -->
+                            <div class="relative mt-12">
+                                <div class="absolute -top-6 left-1/2 w-px h-6 bg-gray-400"></div>
+                                <div class="bg-purple-500 text-white px-6 py-3 rounded-lg shadow-md font-semibold">KEPALA DUSUN</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div><br>
+        </div>
+
+        <!-- B. KONDISI PEMERINTAHAN UMUM -->
+        <div>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-l-4 border-green-500 pl-4">B. Kondisi Pemerintahan Umum</h2>
+            <div class="space-y-8">
+                <!-- 1. Pelayanan Catatan Sipil -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-3">1. Pelayanan Catatan Sipil</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-gray-700">
+                        <p class="mb-4">Pelayanan catatan sipil yang paling banyak digunakan oleh masyarakat disajikan pada tabel di bawah ini:</p>
+                        <p class="font-semibold text-center mb-4">Data Pelayanan Catatan Sipil Desa Banjarsari Tahun 2024</p>
+                        <div class="overflow-x-auto">
+                            <table class="table-auto w-full border-collapse text-sm">
+                                <thead>
+                                    <tr class="bg-green-600 text-white text-center">
+                                        <th class="border border-gray-300 px-4 py-2">No</th>
+                                        <th class="border border-gray-300 px-4 py-2">Jenis Layanan</th>
+                                        <th class="border border-gray-300 px-4 py-2">Jumlah</th>
+                                        <th class="border border-gray-300 px-4 py-2">Keterangan</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr>
+                                        <td class="border border-gray-300 px-4 py-2">1</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-left">NIK</td>
+                                        <td class="border border-gray-300 px-4 py-2">-</td>
+                                        <td class="border border-gray-300 px-4 py-2"></td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="border border-gray-300 px-4 py-2">2</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-left">KK</td>
+                                        <td class="border border-gray-300 px-4 py-2">2.253</td>
+                                        <td class="border border-gray-300 px-4 py-2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 px-4 py-2">3</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-left">KTP</td>
+                                        <td class="border border-gray-300 px-4 py-2">5.947</td>
+                                        <td class="border border-gray-300 px-4 py-2"></td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="border border-gray-300 px-4 py-2">4</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-left">Akta Kelahiran</td>
+                                        <td class="border border-gray-300 px-4 py-2">523</td>
+                                        <td class="border border-gray-300 px-4 py-2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 px-4 py-2">5</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-left">Akta-akta Lainnya</td>
+                                        <td class="border border-gray-300 px-4 py-2">1.500</td>
+                                        <td class="border border-gray-300 px-4 py-2"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="text-sm text-right italic mt-2">Sumber: Data Desa Banjarsari</p>
+                    </div>
+                </div>
+
+                <!-- 2. Perizinan -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-3">2. Perizinan</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-gray-700">
+                        <p>Jenis perizinan yang sering diajukan oleh masyarakat antara lain:</p>
+                        <ul class="list-disc list-inside pl-4 mt-2 space-y-1">
+                            <li>Izin Mendirikan Bangunan (IMB)</li>
+                            <li>Izin Peruntukan Penggunaan Tanah (IPPT)</li>
+                            <li>Izin Gangguan (HO)</li>
+                            <li>Surat Izin Usaha Perdagangan (SIUP)</li>
+                            <li>Izin Usaha Pertambangan Bahan Galian Golongan C</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. Aparatur Pemerintahan -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-700 mb-3">3. Aparatur Pemerintahan</h3>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-gray-700">
+                        <p class="font-semibold text-center mb-4">Jumlah Aparatur Pemerintahan dan Anggota Kelembagaan Desa Banjarsari Tahun 2024</p>
+                        <div class="overflow-x-auto">
+                            <table class="table-auto w-full border-collapse text-sm">
+                                <thead>
+                                    <tr class="bg-green-600 text-white text-center">
+                                        <th class="border border-gray-300 px-4 py-2">No</th>
+                                        <th class="border border-gray-300 px-4 py-2">Uraian</th>
+                                        <th class="border border-gray-300 px-4 py-2">Jumlah</th>
+                                        <th class="border border-gray-300 px-4 py-2">Keterangan</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr>
+                                        <td class="border border-gray-300 px-4 py-2">1</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-left">Kepala Desa</td>
+                                        <td class="border border-gray-300 px-4 py-2">1</td>
+                                        <td class="border border-gray-300 px-4 py-2"></td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="border border-gray-300 px-4 py-2">2</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-left">Sekretaris Desa</td>
+                                        <td class="border border-gray-300 px-4 py-2">1</td>
+                                        <td class="border border-gray-300 px-4 py-2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 px-4 py-2">3</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-left">Kepala Urusan</td>
+                                        <td class="border border-gray-300 px-4 py-2">6</td>
+                                        <td class="border border-gray-300 px-4 py-2"></td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="border border-gray-300 px-4 py-2">4</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-left">Kepala Dusun</td>
+                                        <td class="border border-gray-300 px-4 py-2">3</td>
+                                        <td class="border border-gray-300 px-4 py-2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="border border-gray-300 px-4 py-2">5</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-left">Ketua RW</td>
+                                        <td class="border border-gray-300 px-4 py-2">8</td>
+                                        <td class="border border-gray-300 px-4 py-2"></td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="border border-gray-300 px-4 py-2">6</td>
+                                        <td class="border border-gray-300 px-4 py-2 text-left">Ketua RT</td>
+                                        <td class="border border-gray-300 px-4 py-2">36</td>
+                                        <td class="border border-gray-300 px-4 py-2"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p class="text-sm text-right italic mt-2">Sumber: Data Desa BANJARSARI</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </section>
