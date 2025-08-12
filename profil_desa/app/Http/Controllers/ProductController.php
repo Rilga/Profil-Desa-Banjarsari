@@ -36,9 +36,11 @@ class ProductController extends Controller
 
         // Paginate hasilnya
         $products = $query->paginate(10);
+        $featuredProducts = Product::where('is_featured', true)->get();
 
         // Kirim ke view katalog
-        return view('katalog', compact('products', 'categories'));
+        return view('katalog', compact('products', 'categories', 'featuredProducts'));
+
     }
 
     /**

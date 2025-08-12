@@ -72,7 +72,8 @@ class LandingController extends Controller
 
     public function produkunggulan()
     {
-        return view('produkunggulan');
+        $produks = \App\Models\Product::where('is_featured', true)->latest()->get();
+        return view('produkunggulan', compact('produks'));
     }
 
         public function katalog()

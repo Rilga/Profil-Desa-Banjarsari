@@ -55,7 +55,7 @@ class ProductController extends Controller
         }
 
         $validatedData['slug'] = Str::slug($request->name);
-
+        $validatedData['is_featured'] = $request->has('is_featured');
         Product::create($validatedData);
 
         // Arahkan kembali ke route user.products.index
@@ -84,6 +84,7 @@ class ProductController extends Controller
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:2048',
             'shoppee' => 'nullable|url',
             'whatsapp' => 'nullable|string',
+            'is_featured' => 'nullable|boolean',
             'category_id' => 'required|exists:categories,id',
             'tags' => 'nullable|string',
             'seller' => 'required|string|max:255',
@@ -98,6 +99,7 @@ class ProductController extends Controller
         }
 
         $validatedData['slug'] = Str::slug($request->name);
+        $validatedData['is_featured'] = $request->has('is_featured');
         $product->update($validatedData);
 
         // Arahkan kembali ke route user.products.index

@@ -36,7 +36,7 @@
                                     <label for="price" class="block text-sm font-medium text-gray-700">Harga (Rp)</label>
                                     <input type="number" name="price" id="price" value="{{ old('price', $product->price) }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
                                 </div>
-                                 <div class="mb-4">
+                                <div class="mb-4">
                                     <label for="category_id" class="block text-sm font-medium text-gray-700">Kategori</label>
                                     <select name="category_id" id="category_id" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
                                         <option value="">Pilih Kategori</option>
@@ -53,6 +53,15 @@
                                         <img src="{{ Storage::url($product->image) }}" alt="{{ $product->name }}" class="h-24 w-24 object-cover rounded">
                                     </div>
                                     @endif
+                                </div>
+                                {{-- Checkbox Produk Unggulan --}}
+                                <div class="mb-4">
+                                    <label class="inline-flex items-center">
+                                        <input type="checkbox" name="is_featured" value="1" 
+                                            {{ old('is_featured', $product->is_featured) ? 'checked' : '' }}
+                                            class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500">
+                                        <span class="ml-2 text-sm text-gray-700">Produk Unggulan</span>
+                                    </label>
                                 </div>
                             </div>
 
@@ -78,7 +87,13 @@
 
                         <div class="mt-6 flex justify-end">
                             <a href="{{ route('user.products.index') }}" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded mr-2">Batal</a>
-                            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Update Produk</button>
+                            <button type="submit" 
+                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                                style="background-color: #3b82f6; color: white; padding: 8px 16px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; transition: all 0.2s;"
+                                onmouseover="this.style.backgroundColor='#1d4ed8'"
+                                onmouseout="this.style.backgroundColor='#3b82f6'">
+                                Update Produk
+                            </button>
                         </div>
                     </form>
                 </div>

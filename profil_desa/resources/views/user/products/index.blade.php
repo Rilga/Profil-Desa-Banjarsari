@@ -11,8 +11,11 @@
                 <div class="p-6 text-gray-900">
 
                     <div class="flex justify-end mb-4">
-                        <a href="{{ route('user.products.create') }}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
-                            + Tambah Produk
+                        <a href="{{ route('user.products.create') }}" 
+                        style="background: linear-gradient(to right, #10b981, #059669); color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.2s;"
+                        onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.15)'"
+                        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)'">
+                            ➕ Tambah Produk Baru
                         </a>
                     </div>
 
@@ -31,6 +34,7 @@
                                     <th class="w-1/4 text-left py-3 px-4 uppercase font-semibold text-sm">Nama Produk</th>
                                     <th class="w-1/6 text-left py-3 px-4 uppercase font-semibold text-sm">Kategori</th>
                                     <th class="w-1/6 text-left py-3 px-4 uppercase font-semibold text-sm">Harga</th>
+                                    <th class="w-1/6 text-left py-3 px-4 uppercase font-semibold text-sm">Produk Unggulan</th>
                                     <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Aksi</th>
                                 </tr>
                             </thead>
@@ -49,6 +53,13 @@
                                     <td class="text-left py-3 px-4">{{ $product->category->name ?? 'N/A' }}</td>
                                     <td class="text-left py-3 px-4">Rp{{ number_format($product->price, 0, ',', '.') }}</td>
                                     <td class="text-left py-3 px-4">
+                                        @if($product->is_featured)
+                                            <span class="text-green-600 font-bold">✓</span>
+                                        @else
+                                            <span class="text-gray-400">✗</span>
+                                        @endif
+                                    </td>
+                                    <td class="text-left py-3 px-4">
                                         <div class="flex">
                                             <a href="{{ route('user.products.edit', $product->id) }}" class="text-blue-500 hover:text-blue-700 mr-2">Edit</a>
                                             <form action="{{ route('user.products.destroy', $product->id) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus produk ini?');">
@@ -61,7 +72,7 @@
                                 </tr>
                                 @empty
                                 <tr>
-                                    <td colspan="6" class="text-center py-4">Tidak ada produk.</td>
+                                    <td colspan="7" class="text-center py-4">Tidak ada produk.</td>
                                 </tr>
                                 @endforelse
                             </tbody>

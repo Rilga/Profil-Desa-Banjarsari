@@ -1,6 +1,7 @@
 <x-app-layout>
     <div class="max-w-6xl mx-auto px-4" style="padding-top: 120px;">
     <div class="max-w-6xl mx-auto px-4" style="padding-top: 10px;">
+
         {{-- Filter & Search --}}
         <form method="GET" action="{{ route('katalog.index') }}" class="flex flex-col md:flex-row gap-4 mb-12">
             {{-- Dropdown Kategori --}}
@@ -24,43 +25,69 @@
             </div>
         </form>
 
+        {{-- Produk Unggulan --}}
+        @if(isset($featuredProducts) && $featuredProducts->count())
+            <h2 class="text-2xl font-bold mb-4">Produk Unggulan</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12">
+                @foreach($featuredProducts as $product)
+                    <a href="{{ route('katalog.show', $product->slug) }}" 
+                       class="bg-white border rounded-xl shadow-lg p-4 flex flex-col items-center hover:shadow-xl transition-shadow duration-300 no-underline relative">
+                        
+                        {{-- Label Unggulan --}}
+                        <span class="absolute top-2 left-2 bg-yellow-400 text-white text-xs font-bold px-2 py-1 rounded">
+                            ⭐ Unggulan
+                        </span>
+
+                        <div class="w-full h-48 mb-4 flex items-center justify-center">
+                            <img src="{{ $product->image ? asset('storage/' . $product->image) : 'https://placehold.co/400x400/e2e8f0/333333?text=No+Image' }}" 
+                                 alt="{{ $product->name }}" 
+                                 class="max-h-full max-w-full object-contain">
+                        </div>
+                        <div class="text-center w-full">
+                            <h3 class="font-semibold text-sm md:text-base mb-2 text-gray-800 line-clamp-2">{{ $product->name }}</h3>
+                            <div class="text-green-700 font-bold text-lg mb-2">
+                                Rp{{ number_format($product->price, 0, ',', '.') }}
+                            </div>
+                            <div class="flex justify-center text-yellow-400 text-sm mb-3">
+                                @for ($i = 1; $i <= 5; $i++)
+                                    {!! $i <= 4 ? '★' : '☆' !!}
+                                @endfor
+                            </div>
+                            <div class="w-full bg-green-600 text-white py-2 px-4 rounded-lg text-sm font-medium">
+                                Lihat Detail
+                            </div>
+                        </div>
+                    </a>
+                @endforeach
+            </div>
+        @endif
+
         {{-- Produk Grid - Menggunakan data dari Controller --}}
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-
-            {{-- Menghapus data statis dan langsung loop data $products dari controller --}}
             @foreach($products as $product)
-            {{-- Mengubah div menjadi tag <a> agar seluruh kartu produk bisa diklik --}}
-            <a href="{{ route('katalog.show', $product->slug) }}" class="bg-white border rounded-xl shadow-lg p-4 flex flex-col items-center hover:shadow-xl transition-shadow duration-300 no-underline">
-                <div class="w-full h-48 mb-4 flex items-center justify-center">
-                    {{-- Menggunakan gambar placeholder karena belum ada kolom gambar di database --}}
-                    <img  src="{{ $product->image ? asset('storage/' . $product->image) : 'https://placehold.co/400x400/e2e8f0/333333?text=No+Image' }}" alt="{{ $product->name }}" class="max-h-full max-w-full object-contain">
-                </div>
-                <div class="text-center w-full">
-                    {{-- Mengambil nama dari database --}}
-                    <h3 class="font-semibold text-sm md:text-base mb-2 text-gray-800 line-clamp-2">{{ $product->name }}</h3>
-                    
-                    {{-- Mengambil harga dari database --}}
-                    <div class="text-green-700 font-bold text-lg mb-2">
-                        Rp{{ number_format($product->price, 0, ',', '.') }}
+                <a href="{{ route('katalog.show', $product->slug) }}" class="bg-white border rounded-xl shadow-lg p-4 flex flex-col items-center hover:shadow-xl transition-shadow duration-300 no-underline">
+                    <div class="w-full h-48 mb-4 flex items-center justify-center">
+                        <img src="{{ $product->image ? asset('storage/' . $product->image) : 'https://placehold.co/400x400/e2e8f0/333333?text=No+Image' }}" alt="{{ $product->name }}" class="max-h-full max-w-full object-contain">
                     </div>
-                    
-                    {{-- Memberi rating statis untuk menjaga tampilan --}}
-                    <div class="flex justify-center text-yellow-400 text-sm mb-3">
-                        @for ($i = 1; $i <= 5; $i++)
-                            {!! $i <= 4 ? '★' : '☆' !!} {{-- Rating statis 4 bintang --}}
-                        @endfor
+                    <div class="text-center w-full">
+                        <h3 class="font-semibold text-sm md:text-base mb-2 text-gray-800 line-clamp-2">{{ $product->name }}</h3>
+                        <div class="text-green-700 font-bold text-lg mb-2">
+                            Rp{{ number_format($product->price, 0, ',', '.') }}
+                        </div>
+                        <div class="flex justify-center text-yellow-400 text-sm mb-3">
+                            @for ($i = 1; $i <= 5; $i++)
+                                {!! $i <= 4 ? '★' : '☆' !!}
+                            @endfor
+                        </div>
+                        <div class="w-full bg-green-600 text-white py-2 px-4 rounded-lg text-sm font-medium">
+                            Lihat Detail
+                        </div>
                     </div>
-
-                    {{-- Tombol ini sekarang bagian dari link, fungsinya menjadi visual --}}
-                    <div class="w-full bg-green-600 text-white py-2 px-4 rounded-lg text-sm font-medium">
-                        Lihat Detail
-                    </div>
-                </div>
-            </a>
+                </a>
             @endforeach
         </div>
 
-        {{-- Pagination - Menggunakan link dari Laravel Pagination --}}
+        {{-- Pagination --}}
         <div class="mt-12 flex justify-center items-center">
             {{ $products->links() }}
         </div>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController as PublicProductController; 
+use App\Http\Controllers\user\StatistikDashboardController;
 
 use App\Http\Controllers\LandingController;
 
@@ -44,6 +45,11 @@ Route::middleware(['auth', 'verified', UserMiddleware::class])->prefix('user')->
     Route::get('/produkunggulan', [UserController::class, 'produkunggulan'])->name('produkunggulan');
     Route::resource('products', UserProductController::class)->names('products');
 });
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard/statistik', [StatistikDashboardController::class, 'index'])->name('user.statistik');
+});
+
 
 Route::middleware(['auth', 'adminMiddleware'])->group(function () {
     Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('admin.dashboard');

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('shoppee')->nullable();   // link ke Shopee
             $table->string('whatsapp')->nullable();  // link ke WhatsApp
+            $table->boolean('is_featured')->default(false); // <--- ini untuk produk unggulan
             $table->timestamps();
         });
     }

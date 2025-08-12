@@ -18,6 +18,10 @@
                     <x-nav-link :href="route('user.produkunggulan')" :active="request()->routeIs('user.produkunggulan')">
                         {{ __('Produk Unggulan') }}
                     </x-nav-link>
+                    {{-- Menu Baru: Dashboard Statistik --}}
+                    <x-nav-link :href="route('user.statistik')" :active="request()->routeIs('user.statistik')">
+                        {{ __('Dashboard Statistik') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -70,6 +74,10 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('user.produkunggulan')" :active="request()->routeIs('user.produkunggulan')">
                 {{ __('Produk Unggulan') }}
+            </x-responsive-nav-link>
+            {{-- Menu Baru: Dashboard Statistik --}}
+            <x-responsive-nav-link :href="route('user.statistik')" :active="request()->routeIs('user.statistik')">
+                {{ __('Dashboard Statistik') }}
             </x-responsive-nav-link>
         </div>
         <div class="pt-4 pb-1 border-t border-gray-200">

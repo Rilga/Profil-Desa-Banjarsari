@@ -26,7 +26,7 @@ class CategorySeeder extends Seeder
 
         // Kode di bawah ini akan otomatis memasukkan daftar di atas ke database
         foreach ($categories as $categoryName) {
-            Category::create([
+            Category::firstOrCreate([
                 'name' => $categoryName,
                 'slug' => Str::slug($categoryName),
             ]);
