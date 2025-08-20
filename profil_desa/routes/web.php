@@ -26,7 +26,7 @@ Route::get('/keadaan-ekonomi', [LandingController::class, 'keadaanekonomi'])->na
 Route::get('/kelembagaan-desa', [LandingController::class, 'kelembagaandesa'])->name('kelembagaandesa');
 Route::get('/isu-strategis', [LandingController::class, 'isustrategis'])->name('isustrategis');
 Route::get('/program', [LandingController::class, 'program'])->name('user.program');
-Route::get('/produkunggulan', [LandingController::class, 'produkunggulan'])->name('produkunggulan');
+Route::get('/produkunggulan', [PublicProductController::class, 'produkunggulan'])->name('produkunggulan');
 Route::get('/katalog', [PublicProductController::class, 'index'])->name('katalog.index');
 Route::get('/katalog/{slug}', [PublicProductController::class, 'show'])->name('katalog.show');
 Route::get('/berita', [LandingController::class, 'berita'])->name('user.berita');

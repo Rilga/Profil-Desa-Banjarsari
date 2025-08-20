@@ -64,4 +64,11 @@ class ProductController extends Controller
     // Langkah 3: Kirim kedua data ke view
     return view('detail-produk', compact('product', 'relatedProducts'));
     }
+        public function produkunggulan()
+    {
+        // Ambil produk unggulan
+        $featuredProducts = Product::where('is_featured', true)->get();
+
+        return view('produkunggulan', compact('featuredProducts'));
+}
 }

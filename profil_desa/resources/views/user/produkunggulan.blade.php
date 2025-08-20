@@ -53,67 +53,38 @@
                         <span class="absolute inset-0 bg-[#00923F] transform translate-x-full transition-transform duration-300 ease-out group-hover:translate-x-0"></span>
                     </a>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="relative bg-white rounded-lg shadow-xl overflow-hidden p-2 transform transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl group flex flex-col border border-transparent hover:border-green-400 min-h-[460px]" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-full aspect-square overflow-hidden rounded-md mb-4">
-                            <img src="{{ asset('images/produk-1.png') }}" alt="Lombok Hijau" class="w-full h-full object-cover">
-                        </div>
-                        <div class="flex-grow px-4 text-left">
-                            <span class="inline-block bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1 hover:bg-gray-200 transition-colors duration-300">Sayuran</span>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Lombok Hijau</h3>
-                            <p class="text-gray-600">Rp12.000/kg</p>
-                            <div class="mt-2 text-sm text-orange-600 flex items-center animate-pulse">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M3 18L10 11L14 15L21 8"></path>
-                                    <polyline points="21 12 21 8 17 8"></polyline>
-                                </svg>
-                                <span>Sudah terjual <span class="font-bold">420</span> sejak Januari 2025!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative bg-white rounded-lg shadow-xl overflow-hidden p-2 transform transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl group flex flex-col border border-transparent hover:border-green-400 min-h-[460px]" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-full aspect-square overflow-hidden rounded-md mb-4">
-                            <img src="{{ asset('images/produk-2.png') }}" alt="Jagung Banjarsari" class="w-full h-full object-cover">
-                        </div>
-                        <div class="flex-grow px-4 text-left">
-                            <span class="inline-block bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1 hover:bg-gray-200 transition-colors duration-300">Sayuran</span>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Jagung Banjarsari</h3>
-                            <p class="text-gray-600">Rp14.900</p>
-                            <div class="mt-2 text-sm text-orange-600 flex items-center animate-pulse">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M3 18L10 11L14 15L21 8"></path>
-                                    <polyline points="21 12 21 8 17 8"></polyline>
-                                </svg>
-                                <span>Sudah terjual <span class="font-bold">75</span> sejak Januari 2025!</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative bg-white rounded-lg shadow-xl overflow-hidden p-2 transform transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl group flex flex-col border border-transparent hover:border-green-400 min-h-[460px]" data-aos="fade-up" data-aos-delay="300">
-                        <div class="w-full aspect-square overflow-hidden rounded-md mb-4">
-                            <img src="{{ asset('images/produk-3.png') }}" alt="Apel Banjarsari" class="w-full h-full object-cover">
-                        </div>
-                        <div class="flex-grow px-4 text-left">
-                            <span class="inline-block bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1 hover:bg-gray-200 transition-colors duration-300">Buah-buahan</span>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Apel Banjarsari</h3>
-                            <p class="text-gray-600">Rp5.000</p>
-                            <div class="mt-2 text-sm text-orange-600 flex items-center animate-pulse">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-orange-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M3 18L10 11L14 15L21 8"></path>
-                                    <polyline points="21 12 21 8 17 8"></polyline>
-                                </svg>
-                                <span>Sudah terjual <span class="font-bold">120</span> sejak Januari 2025!</span>
-                            </div>
-                        </div>
-                    </div>
+
+<!-- Tambahan kode produk unggulan dari database -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    @forelse ($featuredProducts ?? [] as $product)
+        <a href="{{ route('katalog.show', $product->slug) }}" class="group">
+            <div class="relative bg-white rounded-lg shadow-xl overflow-hidden p-2 transform transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl flex flex-col border border-transparent hover:border-green-400 min-h-[460px]" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-full aspect-square overflow-hidden rounded-md mb-4">
+                    <img src="{{ asset('storage/products/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-full object-cover">
                 </div>
+                <div class="flex-grow px-4 text-left">
+                    <span class="inline-block bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1 hover:bg-gray-200 transition-colors duration-300">{{ $product->category->name }}</span>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ $product->name }}</h3>
+                    <p class="text-gray-600">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
+                </div>
+            </div>
+        </a>
+    @empty
+        <div class="col-span-full text-center py-8">
+            <p class="text-gray-500 text-lg">Belum ada produk unggulan.</p>
+        </div>
+    @endforelse
+</div>
+<!-- End tambahan kode produk unggulan -->
+
             </div>
         </section>
 
         <section id="artikel" class="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-transparent via-white/50 to-white">
             <div class="max-w-6xl mx-auto">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-left leading-tight" data-aos="fade-up">
-                        Menganyam Harapan dan Membangun<br>Masa Depan Cerah Melalui UMKM Desa Banjarsari.
-                    </h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-left leading-tight" data-aos="fade-up">
+                    Menganyam Harapan dan Membangun<br>Masa Depan Cerah Melalui UMKM Desa Banjarsari.
+                </h2>
                 <div class="flex flex-col md:flex-row gap-8 mb-12">
                     <p class="text-gray-700 leading-relaxed md:w-1/2" data-aos="fade-right" data-aos-delay="100">
                         Desa Banjarsari menyimpan potensi besar melalui UMKM yang berkembang dari kreativitas dan kearifan warga. Produk-produk asli desa ini tidak hanya berkualitas, tapi juga membawa nilai budaya yang kuat. UMKM menjadi sumber harapan untuk ekonomi yang mandiri dan masa depan yang lebih cerah bagi seluruh warga.
@@ -134,22 +105,23 @@
         </section>
     </div>
 
-    <footer class="bg-[#00923F] text-white py-4">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center gap-4">
-                <a href="" class="text-white text-decoration-none">
-                    <img src="{{ asset('images/logo.png') }}" alt="Banjarsari" class="logo-img" style="height: 45px; width: auto; object-fit: contain;">
-                </a>
-                <div class="d-flex gap-4">
-                    <a href="" class="text-white text-decoration-none hover:text-white/80 transition-colors duration-300">Privacy Policy</a>
-                    <a href="" class="text-white text-decoration-none hover:text-white/80 transition-colors duration-300">Hubungi Kami</a>
-                </div>
-            </div>
-            <div class="text-white/80">
-                © {{ date('Y') }} Banjarsari. All Rights Reserved.
+  <!-- FOOTER -->
+<footer class="bg-[#00923F] text-white py-4">
+    <div class="container d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-4">
+            <a href="" class="text-white text-decoration-none">
+                <img src="{{ asset('images/logo.png') }}" alt="Banjarsari" class="logo-img" style="height: 45px; width: auto; object-fit: contain;">
+            </a>
+            <div class="d-flex gap-4">
+                <a href="" class="text-white text-decoration-none hover:text-white/80 transition-colors duration-300">Privacy Policy</a>
+                <a href="" class="text-white text-decoration-none hover:text-white/80 transition-colors duration-300">Hubungi Kami</a>
             </div>
         </div>
-    </footer>
+        <div class="text-white/80">
+            © {{ date('Y') }} Banjarsari. All Rights Reserved.
+        </div>
+    </div>
+</footer>
 
     <style>
     /* Additional animations and hover effects */

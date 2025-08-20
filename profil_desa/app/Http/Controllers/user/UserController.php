@@ -16,16 +16,18 @@ class UserController extends Controller
 
     public function produkunggulan()
     {
-        return view('user.produkunggulan');
+        $featuredProducts = Product::with('category')
+        ->where('is_featured', 1)
+        ->orderBy('created_at', 'desc')
+        ->get();
+
+    return view('user.produkunggulan', compact('featuredProducts'));
     }
 
     public function katalog()
     {
         $categories = Category::all();
         
-        // --- INI ADALAH BARIS YANG DIPERBAIKI ---
-        // Kita gunakan paginate() untuk membagi data menjadi beberapa halaman.
-        // Angka di dalamnya adalah jumlah item per halaman.
         $products = Product::latest()->paginate(10); 
 
         return view('user.katalog', [
