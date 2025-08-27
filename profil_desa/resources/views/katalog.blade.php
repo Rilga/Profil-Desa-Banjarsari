@@ -40,6 +40,8 @@
                 <img  src="{{ $product->image ? asset('storage/' . $product->image) : 'https://placehold.co/400x400/e2e8f0/333333?text=No+Image' }}" alt="{{ $product->name }}" class="max-h-full max-w-full object-contain">
             </div>
             <div class="text-center w-full">
+
+                <span class="inline-block bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1 hover:bg-gray-200 transition-colors duration-300">{{ $product->category->name }}</span>
                 {{-- Mengambil nama dari database --}}
                 <h3 class="font-semibold text-sm md:text-base mb-2 text-gray-800 line-clamp-2">{{ $product->name }}</h3>
                 
@@ -48,12 +50,6 @@
                     Rp{{ number_format($product->price, 0, ',', '.') }}
                 </div>
                 
-                {{-- Memberi rating statis untuk menjaga tampilan --}}
-                <div class="flex justify-center text-yellow-400 text-sm mb-3">
-                    @for ($i = 1; $i <= 5; $i++)
-                        {!! $i <= 4 ? '★' : '☆' !!} {{-- Rating statis 4 bintang --}}
-                    @endfor
-                </div>
 
                 {{-- Tombol ini sekarang bagian dari link, fungsinya menjadi visual --}}
                 <div class="w-full bg-green-600 text-white py-2 px-4 rounded-lg text-sm font-medium">

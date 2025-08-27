@@ -31,6 +31,6 @@ class StatistikDashboardController extends Controller
         ];
 
         // Return ke view
-        return view('user.statistik.index', compact('statistik'));
+        return view('user.dashboard', compact('statistik'));
     }
 }

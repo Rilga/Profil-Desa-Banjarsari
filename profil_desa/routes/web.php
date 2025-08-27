@@ -41,14 +41,10 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::middleware(['auth', 'verified', UserMiddleware::class])->prefix('user')->name('user.')->group(function () {
-    Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');
-    Route::get('/produkunggulan', [UserController::class, 'produkunggulan'])->name('produkunggulan');
+    Route::get('/dashboard', [StatistikDashboardController::class, 'index'])->name('dashboard');
     Route::resource('products', UserProductController::class)->names('products');
 });
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard/statistik', [StatistikDashboardController::class, 'index'])->name('user.statistik');
-});
 
 
 Route::middleware(['auth', 'adminMiddleware'])->group(function () {

@@ -3,8 +3,8 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('user.dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                    <a href="{{ route('user.dashboard') }}" class="logo">
+                        <img src="{{ asset('images/logo.png') }}" class="h-8 transition-all duration-300" style="width: 30px; height: auto; transition: all 0.3s ease;">
                     </a>
                 </div>
 
@@ -14,13 +14,6 @@
                     </x-nav-link>
                     <x-nav-link :href="route('user.products.index')" :active="request()->routeIs('user.products.*')">
                         {{ __('Katalog Produk') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('user.produkunggulan')" :active="request()->routeIs('user.produkunggulan')">
-                        {{ __('Produk Unggulan') }}
-                    </x-nav-link>
-                    {{-- Menu Baru: Dashboard Statistik --}}
-                    <x-nav-link :href="route('user.statistik')" :active="request()->routeIs('user.statistik')">
-                        {{ __('Dashboard Statistik') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -71,13 +64,6 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('user.products.index')" :active="request()->routeIs('user.products.*')">
                 {{ __('Katalog Produk') }}
-            </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('user.produkunggulan')" :active="request()->routeIs('user.produkunggulan')">
-                {{ __('Produk Unggulan') }}
-            </x-responsive-nav-link>
-            {{-- Menu Baru: Dashboard Statistik --}}
-            <x-responsive-nav-link :href="route('user.statistik')" :active="request()->routeIs('user.statistik')">
-                {{ __('Dashboard Statistik') }}
             </x-responsive-nav-link>
         </div>
         <div class="pt-4 pb-1 border-t border-gray-200">

@@ -50,7 +50,7 @@ class ProductController extends Controller
         ]);
 
         if ($request->hasFile('image')) {
-            $path = $request->file('image')->store('public/products');
+            $path = $request->file('image')->store('products', 'public');
             $validatedData['image'] = $path;
         }
 
@@ -94,7 +94,7 @@ class ProductController extends Controller
             if ($product->image) {
                 Storage::delete($product->image);
             }
-            $path = $request->file('image')->store('public/products');
+            $path = $request->file('image')->store('products', 'public');
             $validatedData['image'] = $path;
         }
 
@@ -112,7 +112,7 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         if ($product->image) {
-            Storage::delete($product->image);
+            Storage::disk('public')->delete($product->image);
         }
         $product->delete();
 

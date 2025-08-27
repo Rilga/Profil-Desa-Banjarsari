@@ -3,128 +3,131 @@
 @section('content')
 
 <!-- HERO SECTION -->
-<section class="relative h-screen overflow-hidden">
-    <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
-        <source src="{{ asset('videos/hero-banjarsari.mp4') }}" type="video/mp4">
-    </video>
-    <div class="absolute inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center">
-        <div class="text-center text-white px-4" data-aos="fade-up" data-aos-duration="1000">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Dari Banjarsari, Untukmu</h1>
-            <p class="text-lg md:text-xl mb-8 font-medium">Temukan produk UMKM Banjarsari dari desa, untuk semua, kini hadir secara digital</p>
-            <a href="#artikel" class="bg-[#00923F] hover:bg-green-700 text-white font-medium py-3 px-6 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
-                Lebih Lanjut
-            </a>
+<div class="flex flex-col min-h-screen"> 
+    <section class="relative h-screen overflow-hidden">
+        <video class="absolute inset-0 w-full h-full object-cover" autoplay loop muted playsinline>
+            <source src="{{ asset('videos/hero-banjarsari.mp4') }}" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-black/30 backdrop-blur-sm flex items-center justify-center">
+            <div class="text-center text-white px-4" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Dari Banjarsari, Untukmu</h1>
+                <p class="text-lg md:text-xl mb-8 font-medium">Temukan produk UMKM Banjarsari dari desa, untuk semua, kini hadir secara digital</p>
+                <a href="#artikel" class="bg-[#00923F] hover:bg-green-700 text-white font-medium py-3 px-6 transition duration-300 ease-in-out transform hover:scale-105 shadow-lg">
+                    Lebih Lanjut
+                </a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <!-- GRADIENT BACKGROUND CONTAINER -->
-<div class="bg-gradient-to-b from-[#c8e6c0] via-[#e8f0e4] to-white pb-50">
-    <!-- INFO BOXES -->
-    <section class="relative -mt-20 z-10 px-4 md:px-8 lg:px-16 mb-16">
-        <div class="bg-white rounded-xl shadow-xl p-6 md:p-8 lg:p-10 max-w-6xl mx-auto flex flex-col md:flex-row justify-around items-center gap-6 transition-all duration-300 ease-in-out">
-            <div class="flex flex-col items-center text-center p-4 group" data-aos="fade-up" data-aos-delay="100">
-                <div class="overflow-hidden rounded-full p-2 mb-3 transition-all duration-300 ease-in-out">
-                    <img src="{{ asset('images/icon-transformasi.png') }}" alt="Transformasi Digital" class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110">
+    <main class="flex-grow bg-gradient-to-b from-[#c8e6c0] via-[#e8f0e4] to-white">
+        <div class="bg-gradient-to-b from-[#c8e6c0] via-[#e8f0e4] to-white pb-50">
+            <!-- INFO BOXES -->
+            <section class="relative -mt-20 z-10 px-4 md:px-8 lg:px-16 mb-16">
+                <div class="bg-white rounded-xl shadow-xl p-6 md:p-8 lg:p-10 max-w-6xl mx-auto flex flex-col md:flex-row justify-around items-center gap-6 transition-all duration-300 ease-in-out">
+                    <div class="flex flex-col items-center text-center p-4 group" data-aos="fade-up" data-aos-delay="100">
+                        <div class="overflow-hidden rounded-full p-2 mb-3 transition-all duration-300 ease-in-out">
+                            <img src="{{ asset('images/icon-transformasi.png') }}" alt="Transformasi Digital" class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110">
+                        </div>
+                        <p class="text-lg font-semibold text-gray-800 transition-transform duration-300 group-hover:scale-110">Transformasi Digital</p>
+                        <p class="text-sm text-gray-600 transition-transform duration-300 group-hover:scale-110">Mendukung pengembangan UMKM melalui teknologi</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-4 group" data-aos="fade-up" data-aos-delay="200">
+                        <div class="overflow-hidden rounded-full p-2 mb-3 transition-all duration-300 ease-in-out">
+                            <img src="{{ asset('images/icon-lokal.png') }}" alt="Produk Lokal Asli" class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110">
+                        </div>
+                        <p class="text-lg font-semibold text-gray-800 transition-transform duration-300 group-hover:scale-110">Produk Lokal Asli</p>
+                        <p class="text-sm text-gray-600 transition-transform duration-300 group-hover:scale-110">Hasil karya warga dengan kualitas terjamin</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-4 group" data-aos="fade-up" data-aos-delay="300">
+                        <div class="overflow-hidden rounded-full p-2 mb-3 transition-all duration-300 ease-in-out">
+                            <img src="{{ asset('images/icon-ekonomi.png') }}" alt="Ekonomi Lebih Maju" class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110">
+                        </div>
+                        <p class="text-lg font-semibold text-gray-800 transition-transform duration-300 group-hover:scale-110">Ekonomi Lebih Maju</p>
+                        <p class="text-sm text-gray-600 transition-transform duration-300 group-hover:scale-110">Kontribusi nyata dalam memperkuat perekonomian lokal</p>
+                    </div>
                 </div>
-                <p class="text-lg font-semibold text-gray-800 transition-transform duration-300 group-hover:scale-110">Transformasi Digital</p>
-                <p class="text-sm text-gray-600 transition-transform duration-300 group-hover:scale-110">Mendukung pengembangan UMKM melalui teknologi</p>
-            </div>
-            <div class="flex flex-col items-center text-center p-4 group" data-aos="fade-up" data-aos-delay="200">
-                <div class="overflow-hidden rounded-full p-2 mb-3 transition-all duration-300 ease-in-out">
-                    <img src="{{ asset('images/icon-lokal.png') }}" alt="Produk Lokal Asli" class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110">
-                </div>
-                <p class="text-lg font-semibold text-gray-800 transition-transform duration-300 group-hover:scale-110">Produk Lokal Asli</p>
-                <p class="text-sm text-gray-600 transition-transform duration-300 group-hover:scale-110">Hasil karya warga dengan kualitas terjamin</p>
-            </div>
-            <div class="flex flex-col items-center text-center p-4 group" data-aos="fade-up" data-aos-delay="300">
-                <div class="overflow-hidden rounded-full p-2 mb-3 transition-all duration-300 ease-in-out">
-                    <img src="{{ asset('images/icon-ekonomi.png') }}" alt="Ekonomi Lebih Maju" class="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-110">
-                </div>
-                <p class="text-lg font-semibold text-gray-800 transition-transform duration-300 group-hover:scale-110">Ekonomi Lebih Maju</p>
-                <p class="text-sm text-gray-600 transition-transform duration-300 group-hover:scale-110">Kontribusi nyata dalam memperkuat perekonomian lokal</p>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section class="py-16 px-4 md:px-8 lg:px-16">
-            <div class="max-w-6xl mx-auto">
-                <div class="flex justify-between items-center mb-10">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
-                        Produk Unggulan Kami
-                    </h2>
-                    <a href="/katalog" class="bg-black text-white font-medium py-2 px-4 transition duration-300 ease-in-out flex items-center gap-2 shadow-lg group relative overflow-hidden">
-                        <span class="relative z-10">Belanja Sekarang</span> 
-                        <span class="text-xl transition-transform duration-300 group-hover:translate-x-2 relative z-10">></span>
-                        <span class="absolute inset-0 bg-[#00923F] transform translate-x-full transition-transform duration-300 ease-out group-hover:translate-x-0"></span>
-                    </a>
-                </div>
+            <section class="py-16 px-4 md:px-8 lg:px-16">
+                    <div class="max-w-6xl mx-auto">
+                        <div class="flex justify-between items-center mb-10">
+                            <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+                                Produk Unggulan Kami
+                            </h2>
+                            <a href="/katalog" class="bg-black text-white font-medium py-2 px-4 transition duration-300 ease-in-out flex items-center gap-2 shadow-lg group relative overflow-hidden">
+                                <span class="relative z-10">Belanja Sekarang</span> 
+                                <span class="text-xl transition-transform duration-300 group-hover:translate-x-2 relative z-10">></span>
+                                <span class="absolute inset-0 bg-[#00923F] transform translate-x-full transition-transform duration-300 ease-out group-hover:translate-x-0"></span>
+                            </a>
+                        </div>
 
-<!-- Tambahan kode produk unggulan dari database -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    @forelse ($featuredProducts ?? [] as $product)
-        <a href="{{ route('katalog.show', $product->slug) }}" class="group">
-            <div class="relative bg-white rounded-lg shadow-xl overflow-hidden p-2 transform transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl flex flex-col border border-transparent hover:border-green-400 min-h-[460px]" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-full aspect-square overflow-hidden rounded-md mb-4">
-                    <img src="{{ asset('storage/products/' . $product->image) }}" alt="{{ $product->name }}" class="w-full h-full object-cover">
+        <!-- Tambahan kode produk unggulan dari database -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            @forelse ($featuredProducts ?? [] as $product)
+                <a href="{{ route('katalog.show', $product->slug) }}" class="group">
+                    <div class="relative bg-white rounded-lg shadow-xl overflow-hidden p-2 transform transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl flex flex-col border border-transparent hover:border-green-400 min-h-[460px]" data-aos="fade-up" data-aos-delay="100">
+                        <div class="w-full aspect-square overflow-hidden rounded-md mb-4">
+                            <img src="{{ asset('storage/' . str_replace('public/', '', $product->image)) }}" alt="{{ $product->name }}" class="w-full h-full object-cover">
+                        </div>
+                        <div class="flex-grow px-4 text-left">
+                            <span class="inline-block bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1 hover:bg-gray-200 transition-colors duration-300">{{ $product->category->name }}</span>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ $product->name }}</h3>
+                            <p class="text-gray-600">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
+                        </div>
+                    </div>
+                </a>
+            @empty
+                <div class="col-span-full text-center py-8">
+                    <p class="text-gray-500 text-lg">Belum ada produk unggulan.</p>
                 </div>
-                <div class="flex-grow px-4 text-left">
-                    <span class="inline-block bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full mb-1 hover:bg-gray-200 transition-colors duration-300">{{ $product->category->name }}</span>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ $product->name }}</h3>
-                    <p class="text-gray-600">Rp{{ number_format($product->price, 0, ',', '.') }}</p>
-                </div>
-            </div>
-        </a>
-    @empty
-        <div class="col-span-full text-center py-8">
-            <p class="text-gray-500 text-lg">Belum ada produk unggulan.</p>
+            @endforelse
         </div>
-    @endforelse
-</div>
-<!-- End tambahan kode produk unggulan -->
+        <!-- End tambahan kode produk unggulan -->
 
-    <!-- ARTIKEL SECTION -->
-    <section id="artikel" class="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-transparent via-white/50 to-white">
-        <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-left leading-tight" data-aos="fade-up">
-                    Menganyam Harapan dan Membangun<br>Masa Depan Cerah Melalui UMKM Desa Banjarsari.
-                </h2>
-            <div class="flex flex-col md:flex-row gap-8 mb-12">
-                <p class="text-gray-700 leading-relaxed md:w-1/2" data-aos="fade-right" data-aos-delay="100">
-                    Desa Banjarsari menyimpan potensi besar melalui UMKM yang berkembang dari kreativitas dan kearifan warga. Produk-produk asli desa ini tidak hanya berkualitas, tapi juga membawa nilai budaya yang kuat. UMKM menjadi sumber harapan untuk ekonomi yang mandiri dan masa depan yang lebih cerah bagi seluruh warga.
-                </p>
-                <p class="text-gray-700 leading-relaxed md:w-1/2" data-aos="fade-left" data-aos-delay="200">
-                    Dengan dukungan teknologi, UMKM Banjarsari menjangkau pasar lebih luas tanpa meninggalkan tradisi. Setiap transaksi mendukung ekonomi desa dan melestarikan budaya. Bersama, kita membangun masa depan gemilang.
-                </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="overflow-hidden shadow-lg" data-aos="fade-down" data-aos-delay="100">
-                    <img src="{{ asset('images/foto-kerajinan.jpeg') }}" alt="Kerajinan Tangan" class="w-full h-72 object-cover">
+            <!-- ARTIKEL SECTION -->
+            <section id="artikel" class="py-16 px-4 md:px-8 lg:px-16 bg-gradient-to-b from-transparent via-white/50 to-white">
+                <div class="max-w-6xl mx-auto">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 text-left leading-tight" data-aos="fade-up">
+                            Menganyam Harapan dan Membangun<br>Masa Depan Cerah Melalui UMKM Desa Banjarsari.
+                        </h2>
+                    <div class="flex flex-col md:flex-row gap-8 mb-12">
+                        <p class="text-gray-700 leading-relaxed md:w-1/2" data-aos="fade-right" data-aos-delay="100">
+                            Desa Banjarsari menyimpan potensi besar melalui UMKM yang berkembang dari kreativitas dan kearifan warga. Produk-produk asli desa ini tidak hanya berkualitas, tapi juga membawa nilai budaya yang kuat. UMKM menjadi sumber harapan untuk ekonomi yang mandiri dan masa depan yang lebih cerah bagi seluruh warga.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed md:w-1/2" data-aos="fade-left" data-aos-delay="200">
+                            Dengan dukungan teknologi, UMKM Banjarsari menjangkau pasar lebih luas tanpa meninggalkan tradisi. Setiap transaksi mendukung ekonomi desa dan melestarikan budaya. Bersama, kita membangun masa depan gemilang.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="overflow-hidden shadow-lg" data-aos="fade-down" data-aos-delay="100">
+                            <img src="{{ asset('images/foto-kerajinan.jpeg') }}" alt="Kerajinan Tangan" class="w-full h-72 object-cover">
+                        </div>
+                        <div class="overflow-hidden shadow-lg" data-aos="fade-down" data-aos-delay="200">
+                            <img src="{{ asset('images/foto-pasar.jpg') }}" alt="Pasar Lokal" class="w-full h-72 object-cover">
+                        </div>
+                    </div>
                 </div>
-                <div class="overflow-hidden shadow-lg" data-aos="fade-down" data-aos-delay="200">
-                    <img src="{{ asset('images/foto-pasar.jpg') }}" alt="Pasar Lokal" class="w-full h-72 object-cover">
-                </div>
-            </div>
+            </section>
         </div>
-    </section>
-</div>
+    </main>
 
-<footer class="bg-[#00923F] text-white py-6">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 px-4">
-        <div class="flex items-center gap-4">
-            <a href="#">
-                <img src="{{ asset('images/logo.png') }}" alt="Banjarsari" class="h-12 w-auto object-contain">
-            </a>
-            <div class="flex gap-4">
-                <a href="#" class="hover:text-white/80 transition-colors">Privacy Policy</a>
-                <a href="#" class="hover:text-white/80 transition-colors">Hubungi Kami</a>
+    <footer class="bg-[#00923F] text-white py-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 px-4">
+            <div class="flex items-center gap-4">
+                <a href="#">
+                    <img src="{{ asset('images/logo.png') }}" alt="Banjarsari" class="h-12 w-auto object-contain">
+                </a>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white/80 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white/80 transition-colors">Hubungi Kami</a>
+                </div>
+            </div>
+            <div class="text-white/80 text-sm md:text-base">
+                © {{ date('Y') }} Banjarsari. All Rights Reserved.
             </div>
         </div>
-        <div class="text-white/80 text-sm md:text-base">
-            © {{ date('Y') }} Banjarsari. All Rights Reserved.
-        </div>
-    </div>
-</footer>
+    </footer>
 <style>
     /* Additional animations and hover effects */
     .group:hover .group-hover\:scale-110 {
