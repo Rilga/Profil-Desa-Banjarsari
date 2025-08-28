@@ -39,6 +39,8 @@
     </div>
   </div>
 
+  <a href="{{ route('user.galeri') }}" class="nav-link {{ Request::is('komunitas*') ? 'active' : '' }}">Galeri</a>
+
   <a href="{{ route('user.program') }}" class="nav-link {{ Request::is('komunitas*') ? 'active' : '' }}">Program</a>
 
   <a href="{{ route('user.produk') }}" class="nav-link {{ Request::is('komunitas*') ? 'active' : '' }}">Produk</a>
@@ -49,11 +51,7 @@
 
 
 
-    <!-- Tombol Login/Register -->
-    <div class="auth-buttons">
-      <a href="{{ route('login') }}" class="login-btn">Masuk</a>
-      <a href="{{ route('register') }}" class="register-btn">Daftar</a>
-    </div>
+    
   </div>
 </nav>
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>

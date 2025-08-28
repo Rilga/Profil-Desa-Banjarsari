@@ -6,25 +6,22 @@ use Illuminate\Http\Request;
 use App\Models\Admin\Berita;
 use App\Models\Admin\Info;
 use App\Models\Admin\Sambutan;
+use App\Models\Admin\Galeri;
+use App\Models\AparatDesa; // <-- 1. Tambahkan impor untuk Model AparatDesa
 
 class LandingController extends Controller
 {
     public function landing()
     {
-        // Ambil semua berita terbaru
         $kontens = Berita::latest()->take(5)->get();
 
-        // Siapkan data slide dari gambar berita
         $slides = $kontens->map(function ($konten) {
-            // Jika gambar masih string, ubah ke array
             $gambarTambahan = is_string($konten->gambar)
                 ? json_decode($konten->gambar, true)
                 : $konten->gambar;
 
-            // Pastikan array valid
             $gambarTambahan = is_array($gambarTambahan) ? $gambarTambahan : [];
 
-            // Ambil gambar pertama dari array, atau fallback ke cover
             $gambarUtama = $gambarTambahan[0] ?? $konten->cover;
 
             return [
@@ -34,10 +31,23 @@ class LandingController extends Controller
         });
 
         $sambutan = Sambutan::first();
-
         $infos = Info::latest()->get();
 
-        return view('welcome', compact('kontens', 'slides', 'sambutan', 'infos'));
+        $galeris = Galeri::latest()->get();
+        $videos = $galeris->where('tipe', 'video')->values();
+        $images = $galeris->where('tipe', 'gambar')->values();
+
+        $aparatur = AparatDesa::latest()->get();
+
+        return view('welcome', compact('kontens', 'slides', 'sambutan', 'infos', 'images', 'videos', 'galeris', 'aparatur'));
+    }
+
+    public function galeri()
+    {
+        $galeris = Galeri::latest()->get();
+        $videos = $galeris->where('tipe', 'video')->values();
+        $images = $galeris->where('tipe', 'gambar')->values();
+        return view('galeri', compact('galeris', 'videos', 'images'));
     }
 
     public function kondisiumum()
@@ -73,6 +83,11 @@ class LandingController extends Controller
     public function produk()
     {
         return view('produk');
+    }
+
+    public function produkunggulan()
+    {
+        return view('produkunggulan');
     }
 
     public function berita()

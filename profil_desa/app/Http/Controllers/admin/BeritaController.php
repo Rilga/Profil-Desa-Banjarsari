@@ -11,7 +11,7 @@ class BeritaController extends Controller
 {
     public function index()
     {
-        $berita = Berita::latest()->get();
+        $berita = Berita::latest()->paginate(10);
         return view('admin.berita.index', compact('berita'));
     }
 
@@ -46,7 +46,7 @@ class BeritaController extends Controller
             'gambar' => $gambarPaths,
         ]);
 
-        return redirect()->route('admin.berita')->with('success', 'Berita berhasil ditambahkan.');
+        return redirect()->route('admin.berita.index')->with('success', 'Berita berhasil ditambahkan.');
     }
 
     public function show(Berita $berita)
@@ -86,7 +86,7 @@ class BeritaController extends Controller
             'deskripsi' => $request->deskripsi,
         ]);
 
-        return redirect()->route('admin.berita')->with('success', 'Berita berhasil diperbarui.');
+        return redirect()->route('admin.berita.index')->with('success', 'Berita berhasil diperbarui.');
     }
 
     public function destroy(Berita $berita)

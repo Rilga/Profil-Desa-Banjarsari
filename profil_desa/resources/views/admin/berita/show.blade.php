@@ -8,7 +8,7 @@
     <div class="py-6">
         <div class="max-w-5xl mx-auto sm:px-6 lg:px-8">
              <!-- Tombol Kembali -->
-            <a href="{{ route('admin.berita') }}"
+            <a href="{{ route('admin.berita.index') }}"
                class="inline-block mb-4 px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300">
                 ← Kembali
             </a>
