@@ -49,6 +49,14 @@ class ProductController extends Controller
             'seller' => 'required|string|max:255',
         ]);
 
+        if ($request->has('is_featured')) {
+            $countFeatured = Product::where('is_featured', true)->count();
+            if ($countFeatured >= 3) {
+                return back()->withErrors(['is_featured' => 'Maksimal hanya boleh ada 3 produk unggulan.'])
+                             ->withInput();
+            }
+        }
+
         if ($request->hasFile('image')) {
             $path = $request->file('image')->store('products', 'public');
             $validatedData['image'] = $path;
@@ -90,6 +98,14 @@ class ProductController extends Controller
             'seller' => 'required|string|max:255',
         ]);
 
+        if ($request->has('is_featured') && !$product->is_featured) {
+            $countFeatured = Product::where('is_featured', true)->count();
+            if ($countFeatured >= 3) {
+                return back()->withErrors(['is_featured' => 'Maksimal hanya boleh ada 3 produk unggulan.'])
+                             ->withInput();
+            }
+        }
+        
         if ($request->hasFile('image')) {
             if ($product->image) {
                 Storage::delete($product->image);

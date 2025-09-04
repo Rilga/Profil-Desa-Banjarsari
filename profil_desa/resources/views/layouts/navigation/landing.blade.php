@@ -43,7 +43,7 @@
 
   <div class="relative" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
     <button class="nav-link flex items-center gap-1">
-      Belanja
+      Produk
       <svg class="w-4 h-4 mt-[2px]" fill="currentColor" viewBox="0 0 20 20">
         <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.043l3.71-3.81a.75.75 0 111.08 1.04l-4.24 4.36a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
       </svg>
@@ -70,12 +70,12 @@
             <a href="{{ route('register') }}" class="register-btn">Daftar</a>
         @endguest
 
-        @auth
+        <!-- @auth
             {{-- Tampilkan ini hanya jika pengunjung sudah login --}}
             <a href="{{ Auth::user()->role === 'admin' ? route('admin.dashboard') : route('user.dashboard') }}" class="register-btn">
                 Dashboard Admin
             </a>
-        @endauth
+        @endauth -->
     </div>
   </div>
 </nav>
