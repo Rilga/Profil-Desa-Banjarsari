@@ -16,6 +16,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'userMiddleware' => UserMiddleware::class,
             'adminMiddleware' => AdminMiddleware::class,
+            'LogVisitor' => \App\Http\Middleware\LogVisitorMiddleware::class, 
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
