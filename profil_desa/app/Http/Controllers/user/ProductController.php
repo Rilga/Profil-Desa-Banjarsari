@@ -8,6 +8,10 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
+use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\Log;
+use App\Imports\ProductsImport;
+use App\Exports\ProductsTemplateExport;
 use Illuminate\Validation\Rule;
 
 class ProductController extends Controller
@@ -135,4 +139,35 @@ class ProductController extends Controller
         // Arahkan kembali ke route user.products.index
         return redirect()->route('user.products.index')->with('success', 'Produk berhasil dihapus.');
     }
+
+    public function import(Request $request)
+    {
+        $request->validate([
+            'file' => 'required|mimes:xlsx,csv,xls'
+        ]);
+
+        try {
+            Excel::import(new ProductsImport, $request->file('file'));
+            return redirect()->route('user.products.index')->with('success', 'Produk berhasil diimport!');
+        } catch (\Exception $e) {
+            Log::error('Import failed: ' . $e->getMessage());
+            // Perbaikan: Menggunakan 'error' untuk pesan flash agar konsisten
+            return redirect()->back()->with('error', 'Import gagal: ' . $e->getMessage());
+        }
+    }
+
+    // ---------------------------
+    // Download Template
+    // ---------------------------
+    public function downloadTemplate()
+    {
+        $filePath = public_path('template/template_produk.xlsx');
+
+        if (file_exists($filePath)) {
+            return response()->download($filePath, 'template_produk.xlsx');
+        }
+
+        return redirect()->back()->with('error', 'File template tidak ditemukan.');
+    }
+
 }

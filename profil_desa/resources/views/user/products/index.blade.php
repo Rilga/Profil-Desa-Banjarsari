@@ -9,25 +9,52 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <div class="flex justify-end mb-4">
-                        <a href="{{ route('user.products.create') }}" 
-                        style="background: linear-gradient(to right, #10b981, #059669); color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.2s;"
-                        onmouseover="this.style.transform='translateY(-1px)'; this.style.boxShadow='0 4px 8px rgba(0,0,0,0.15)'"
-                        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.1)'"
-                        class="flex items-center gap-2">
+                    
+                    {{-- HEADER & TOMBOL AKSI --}}
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
                         
-                        <!-- Ikon Plus (SVG Heroicons) -->
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 text-white">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
-                        </svg>
-
-                        Tambah Produk Baru
+                        {{-- Tombol Tambah Produk --}}
+                        <a href="{{ route('user.products.create') }}" 
+                           style="background-color: #22c55e; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: background-color 0.2s;"
+                           onmouseover="this.style.backgroundColor='#16a34a'"
+                           onmouseout="this.style.backgroundColor='#22c55e'">
+                            Tambah Produk Baru
                         </a>
-                    </div>
 
+                        {{-- Form Import & Tombol Download --}}
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            {{-- Form Import Excel --}}
+                            <form action="{{ route('user.products.import') }}" method="POST" enctype="multipart/form-data" style="display: flex; align-items: center; gap: 8px;">
+                                @csrf
+                                <input type="file" name="file" accept=".xlsx,.xls" 
+                                       style="border: 1px solid #d1d5db; border-radius: 6px; padding: 8px; font-size: 14px;" required>
+                                <button type="submit" 
+                                        style="background-color: #6366f1; color: white; padding: 8px 16px; border-radius: 6px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); transition: background-color 0.2s;"
+                                        onmouseover="this.style.backgroundColor='#4f46e5'"
+                                        onmouseout="this.style.backgroundColor='#6366f1'">
+                                    Import Produk
+                                </button>
+                            </form>
+
+                            {{-- Tombol Download Template --}}
+                            <a href="{{ route('user.products.template.download') }}" 
+                               style="background-color: #3b82f6; color: white; padding: 8px 16px; border-radius: 6px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); transition: background-color 0.2s;"
+                               onmouseover="this.style.backgroundColor='#2563eb'"
+                               onmouseout="this.style.backgroundColor='#3b82f6'">
+                                Download Template
+                            </a>
+                        </div>
+                    </div>
+                    
+                    {{-- ALERT MESSAGES --}}
                     @if(session('success'))
                         <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
                             <span class="block sm:inline">{{ session('success') }}</span>
+                        </div>
+                    @endif
+                    @if(session('error'))
+                        <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+                            <span class="block sm:inline">{{ session('error') }}</span>
                         </div>
                     @endif
 
@@ -47,7 +74,9 @@
                             <tbody class="text-gray-700">
                                 @forelse($products as $product)
                                 <tr>
-                                    <td class="text-left py-3 px-4">{{ $loop->iteration + ($products->currentPage() - 1) * $products->perPage() }}</td>
+                                    <td class="text-left py-3 px-4">
+                                        {{ $loop->iteration + ($products->currentPage() - 1) * $products->perPage() }}
+                                    </td>
                                     <td class="text-left py-3 px-4">
                                         @if($product->image)
                                             <img src="{{ Storage::url($product->image) }}" alt="{{ $product->name }}" class="h-16 w-16 object-cover rounded">

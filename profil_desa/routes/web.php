@@ -38,11 +38,15 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require_once __DIR__ . '/auth.php';
 
 Route::middleware(['auth', 'verified', UserMiddleware::class])->prefix('user')->name('user.')->group(function () {
     Route::get('/dashboard', [StatistikDashboardController::class, 'index'])->name('dashboard');
     Route::resource('products', UserProductController::class)->names('products');
+    Route::post('products/import', [UserProductController::class, 'import'])
+             ->name('products.import');
+    Route::get('products/template/download', [UserProductController::class, 'downloadTemplate'])
+    ->name('products.template.download');
 });
 
 
